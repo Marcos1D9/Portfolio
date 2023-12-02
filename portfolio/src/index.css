@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-white dark:bg-gray-800 pb-0 sm:pb-6 bg-opacity-25
+    }
+
+    h1 {
+        font-family: 'Poppins', sans-serif, ;
+    }
+}
