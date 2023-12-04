@@ -92,17 +92,17 @@ const Home = () => {
                             <div className="flex flex-col gap-5">
                                 <div className="flex flex-col gap-1 ">
                                     <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-200">Front-End Developer • Munia - Salud Mental y Emcional en el Trabajo</h2>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Sept. 2023 - Actualidad</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
                                 </div>
 
                                 {/* Experience Job title */}
 
                                 {/* Experience Job description */}
                                 <ul className="list-disc flex flex-col gap-2 ml-5 text-slate-700 dark:text-gray-300 text-md">
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li>Create a view to be able to view and edit the information of each provider, such as adding the services they offer, their time availability, and their professional documents, among others.</li>
+                                    <li>Plan and carry out the development of a table that will allow comments to be displayed effectively on the platform</li>
+                                    <li>Conditional rendering based on dynamic routes and user type, using Redux toolkit's according to the role of each user, and React-Router-DOM</li>
+                                    <li>Planning, design and development of components made with ReactJs, Material UI and Sass</li>
                                 </ul>
                                 {/* Experience Job description */}
                             </div>
