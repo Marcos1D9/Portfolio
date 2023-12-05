@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faBriefcase, faStar } from '@fortawesome/free-solid-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
 
 const Home = () => {
@@ -28,13 +28,19 @@ const Home = () => {
             {/* Navbar */}
             <div className="mx-auto max-w-3xl sticky top-0 z-10">
                 <header className="-full bottom-0 static flex justify-end items-center py-1 px-5 z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg">
+                    <div className="flex w-12 h-12 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80">
+                        <span >
+                            <img alt="avatar" className="rounded-full drop-shadow-2xl" />
+                        </span>
+                        <p className="ml-14 font-semibold text-lg whitespace-nowrap text-slate-600 dark:text-slate-300">Marcos Damian M.</p>
+                    </div>
                     <button className=" py-4 px-2 sm:py-5 flex items-center gap-4 outline-none"
                         onClick={handleChangeTheme}
                     >
-                        <div className="text-2xl dark:hidden text-slate-700">
+                        <div className="text-4xl dark:hidden text-slate-700">
                             <FontAwesomeIcon icon={faSun} />
                         </div>
-                        <div className="text-2xl hidden dark:block text-slate-100">
+                        <div className="text-4xl hidden dark:block text-slate-100">
                             <FontAwesomeIcon icon={faMoon} />
                         </div>
                         {/* <img className="w-8" src={DarkModeIcon} alt="DarkMode Icon" /> */}
@@ -109,6 +115,14 @@ const Home = () => {
                         </div>
                     </section>
                     {/* Experience section */}
+                    {/* Projects */}
+                    <section className="w-full">
+                        <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
+                            <h2>Projects</h2>
+                            <FontAwesomeIcon icon={faStar} />
+                        </header>
+                    </section>
+                    {/* Projects */}
                 </main>
             </div>
             {/* Main */}
