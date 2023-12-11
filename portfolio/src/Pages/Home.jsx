@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon, faBriefcase, faStar } from '@fortawesome/free-solid-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
+import IconReact from "../components/IconReact";
+import IconTailwind from "../components/IconTailwind";
+
 
 const Home = () => {
     const [theme, setTheme] = useState(() => {
@@ -117,10 +120,36 @@ const Home = () => {
                     {/* Experience section */}
                     {/* Projects */}
                     <section className="w-full">
+                        {/* Projects title */}
                         <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
                             <h2>Projects</h2>
                             <FontAwesomeIcon icon={faStar} />
                         </header>
+                        {/* Projects title */}
+                        <div className="flex flex-col gap-10">
+                            <div className="grid gap-10">
+                                <article className="grid gap-4 sm:gap-7 md:grid-cols-2 group">
+                                    <a className="block">
+
+                                    </a>
+                                    <div className="flex flex-col gap-2.5 justify-center">
+                                        <h3 className="font-bold text-3xl text-slate-800 dark:text-white">Munia Sesiones 1:1</h3>
+                                        <p className="text-slate-600 dark:text-slate-300 text-lg">
+                                            The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.
+                                        </p>
+                                        <div className="flex gap-2 items-center mb-1">
+                                            <div className="relative">
+                                                <IconReact className="text-blue-400 text-4xl " />
+                                                <IconTailwind className="text-4xl text-teal-400" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article>
+
+                                </article>
+                            </div>
+                        </div>
                     </section>
                     {/* Projects */}
                 </main>
