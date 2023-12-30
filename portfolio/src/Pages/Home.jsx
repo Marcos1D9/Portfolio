@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon, faBriefcase, faStar } from '@fortawesome/free-solid-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
 import IconReact from "../components/IconReact";
 import IconTailwind from "../components/IconTailwind";
+import "../index.css";
 
 
 const Home = () => {
@@ -13,6 +14,26 @@ const Home = () => {
         }
         return "light";
     })
+
+    const [scrollPast, setScrollPast] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 244) {
+                setScrollPast(true);
+            } else {
+                setScrollPast(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         if (theme === "dark") {
@@ -25,31 +46,34 @@ const Home = () => {
     const handleChangeTheme = () => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
+    const bounceInStyle = {
+        animation: 'bounceIn 1s forwards',
+    };
 
     return (
         <>
             {/* Navbar */}
             <div className="mx-auto max-w-3xl sticky top-0 z-10">
-                <header className="-full bottom-0 static flex justify-end items-center py-1 px-5 z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg">
-                    <div className="flex w-12 h-12 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80">
-                        <span >
-                            <img alt="avatar" className="rounded-full drop-shadow-2xl" />
-                        </span>
-                        <p className="ml-14 font-semibold text-lg whitespace-nowrap text-slate-600 dark:text-slate-300">Marcos Damian M.</p>
-                    </div>
-                    <button className=" py-4 px-2 sm:py-5 flex items-center gap-4 outline-none"
-                        onClick={handleChangeTheme}
-                    >
-                        <div className="text-4xl dark:hidden text-slate-700">
-                            <FontAwesomeIcon icon={faSun} />
+                <header className={`flex flex-row items-center justify-between py-1 px-5 z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
+                    <div style={scrollPast ? bounceInStyle : null} className={`flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
+                        <div className={`flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
+                            <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
+                                <img className="rounded-full drop-shadow-2xl" src={NewProfilePicWithBackground}/>
+                            </span>
                         </div>
-                        <div className="text-4xl hidden dark:block text-slate-100">
+                        Marcos Damián E. Medina
+                    </div>
+                    <button className="py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
+                        <div className="text-4xl dark:hidden text-slate-700">
                             <FontAwesomeIcon icon={faMoon} />
                         </div>
-                        {/* <img className="w-8" src={DarkModeIcon} alt="DarkMode Icon" /> */}
+                        <div className="text-4xl hidden dark:block text-slate-100">
+                            <FontAwesomeIcon icon={faSun} />
+                        </div>
                     </button>
                 </header>
             </div>
+
             {/* NavBar */}
 
 
@@ -57,7 +81,7 @@ const Home = () => {
             <div className="mx-auto max-w-3xl px-5 mb-5 flex flex-col gap-10"   >
                 <main className="flex flex-col gap-16">
                     {/* Hero presentation */}
-                    <section className="flex flex-col sm:flex-row items-center gap-5">
+                    <section className="flex flex-col sm:flex-row items-center gap-5" >
 
                         {/* Profile Pic */}
                         <div className="relative w-44 h-44 bg-none dark:bg-none border-8 border-white dark:border-gray-900/80 shadow-lg rounded-full overflow-hidden">
@@ -87,7 +111,7 @@ const Home = () => {
                     {/* Hero presentation */}
                     <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
                     {/* Experience section */}
-                    <section className="w-full">
+                    <section className="w-full" id="hero-section">
 
                         {/* Experience section title */}
                         <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
@@ -138,7 +162,7 @@ const Home = () => {
                                             The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.
                                         </p>
                                         <div className="flex gap-2 items-center mb-1">
-                                            <div className="relative">
+                                            <div className="relative flex flex-row">
                                                 <IconReact className="text-blue-400 text-4xl " />
                                                 <IconTailwind className="text-4xl text-teal-400" />
                                             </div>
@@ -155,6 +179,15 @@ const Home = () => {
                 </main>
             </div>
             {/* Main */}
+            <>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur ea sint, nisi voluptas itaque aliquam accusantium voluptate ipsum reprehenderit perferendis quod nulla provident, suscipit debitis non quia fuga velit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae explicabo repellendus unde optio aliquam quisquam suscipit! Nam, necessitatibus consequatur amet facilis consectetur, dolor impedit dolorum distinctio dignissimos culpa et.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam obcaecati placeat nulla expedita esse libero, dolor sequi voluptates quos ullam ea adipisci quisquam beatae architecto iusto impedit magni fuga sint?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos doloremque nesciunt magni voluptates in amet quis quae id sed sint deleniti cumque, ratione, at aperiam nostrum aspernatur unde aliquam!
+                <hr />
+                <hr />
+                <hr />
+            </>
         </>
     )
 }
