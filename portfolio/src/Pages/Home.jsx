@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon, faBriefcase, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
-import IconReact from "../components/IconReact";
-import IconTailwind from "../components/IconTailwind";
+import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
+import tailwindIcon from "../assets/tailwind-svgrepo-com.svg";
+import HTML5Icon from "../assets/html-5-svgrepo-com.svg";
+import MongoDBIcon from "../assets/mongo-svgrepo-com.svg";
+import reactIcon from "../assets/react-svgrepo-com.svg";
 import "../index.css";
 
 
@@ -58,7 +61,7 @@ const Home = () => {
                     <div style={scrollPast ? bounceInStyle : null} className={`flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
                         <div className={`flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
                             <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
-                                <img className="rounded-full drop-shadow-2xl" src={NewProfilePicWithBackground}/>
+                                <img className="rounded-full drop-shadow-2xl" src={NewProfilePicWithBackground} />
                             </span>
                         </div>
                         Marcos Damián E. Medina
@@ -152,26 +155,68 @@ const Home = () => {
                         {/* Projects title */}
                         <div className="flex flex-col gap-10">
                             <div className="grid gap-10">
-                                <article className="grid gap-4 sm:gap-7 md:grid-cols-2 group">
-                                    <a className="block">
+                                <a href="https://sesiones.munia.co/" target="_blank" rel="noreferrer" class="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
+                                    <article class="relative flex flex-col justify-between w-full py-6 px-7">
+                                        {/* Munia project */}
+                                        <h2 class="text-gray-700 dark:text-gray-200 text-lg font-bold">Munia Sesiones 1:1</h2>
+                                        <p class="text-slate-400 dark:text-slate-200">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
 
-                                    </a>
-                                    <div className="flex flex-col gap-2.5 justify-center">
-                                        <h3 className="font-bold text-3xl text-slate-800 dark:text-white">Munia Sesiones 1:1</h3>
-                                        <p className="text-slate-600 dark:text-slate-300 text-lg">
-                                            The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.
-                                        </p>
-                                        <div className="flex gap-2 items-center mb-1">
-                                            <div className="relative flex flex-row">
-                                                <IconReact className="text-blue-400 text-4xl " />
-                                                <IconTailwind className="text-4xl text-teal-400" />
+                                        {/* Project technologies icons */}
+                                        <div class="flex gap-1 mt-1.5 items-center pt-3 pb-6">
+                                            <div class="relative group/tooltip">
+                                                <img src={HTML5Icon} className="w-8" alt="" />
+                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
+                                            </div>
+                                            <div class="relative group/tooltip">
+                                                <img src={tailwindIcon} className="w-9" alt="" />
+                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Tailwind</span>
+                                            </div>
+                                            <div class="relative group/tooltip">
+                                                <img src={reactIcon} className="w-8" alt="" />
+                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </article>
-                                <article>
+                                        {/* Project technologies icons */}
+                                        <img className="rounded-2xl" src={MuniaLoginPic} alt="MuniaLoginPic" />
+                                        <div class="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
+                                            <div class=" text-gray-400 dark:text-gray-50 text-2xl">
+                                                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                                {/* Munia project */}
 
-                                </article>
+                                {/* Grow-Up project */}
+                                <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" class="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
+                                    <article class="relative flex flex-col justify-between w-full py-6 px-7">
+                                        <h2 class="text-gray-700 dark:text-gray-200 text-lg font-bold">Grow-Up Books E-commerce</h2>
+                                        <p class="text-slate-400 dark:text-slate-200">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
+                                        {/* Project technologies icons */}
+                                        <div class="flex gap-1 mt-1.5 items-center pt-3 pb-6">
+                                            <div class="relative group/tooltip">
+                                                <img src={HTML5Icon} className="w-8" alt="" />
+                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
+                                            </div>
+                                            <div class="relative group/tooltip">
+                                                <img src={MongoDBIcon} className="w-8" alt="" />
+                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Mongo DB</span>
+                                            </div>
+                                            <div class="relative group/tooltip">
+                                                <img src={reactIcon} className="w-8" alt="" />
+                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
+                                            </div>
+                                        </div>
+                                        {/* Project technologies icons */}
+                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <div class="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
+                                            <div class=" text-gray-400 dark:text-gray-50 text-2xl">
+                                                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                                {/* Grow-Up project */}
                             </div>
                         </div>
                     </section>
@@ -179,15 +224,6 @@ const Home = () => {
                 </main>
             </div>
             {/* Main */}
-            <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur ea sint, nisi voluptas itaque aliquam accusantium voluptate ipsum reprehenderit perferendis quod nulla provident, suscipit debitis non quia fuga velit.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vitae explicabo repellendus unde optio aliquam quisquam suscipit! Nam, necessitatibus consequatur amet facilis consectetur, dolor impedit dolorum distinctio dignissimos culpa et.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam obcaecati placeat nulla expedita esse libero, dolor sequi voluptates quos ullam ea adipisci quisquam beatae architecto iusto impedit magni fuga sint?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos doloremque nesciunt magni voluptates in amet quis quae id sed sint deleniti cumque, ratione, at aperiam nostrum aspernatur unde aliquam!
-                <hr />
-                <hr />
-                <hr />
-            </>
         </>
     )
 }
