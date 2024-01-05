@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
 import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
 import tailwindIcon from "../assets/tailwind-svgrepo-com.svg";
@@ -119,7 +119,7 @@ const Home = () => {
                         {/* Experience section title */}
                         <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
                             <h2>Experience</h2>
-                            <FontAwesomeIcon className="text-3xl" icon={faBriefcase} />
+                            <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
                         </header>
                         {/* Experience section title */}
 
@@ -150,7 +150,7 @@ const Home = () => {
                         {/* Projects title */}
                         <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
                             <h2>Projects</h2>
-                            <FontAwesomeIcon icon={faStar} />
+                            <FontAwesomeIcon icon={faStar} className="scale-110" />
                         </header>
                         {/* Projects title */}
                         <div className="flex flex-col gap-10">
@@ -221,6 +221,45 @@ const Home = () => {
                         </div>
                     </section>
                     {/* Projects */}
+                    {/* Email section*/}
+                    <section className="w-full">
+                        {/* Email Title */}
+                        <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
+                            <h2>Email</h2>
+                            <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
+                        </header>
+                        {/* Email Title */}
+                        <div className="flex gap-4">
+                            {/* Email Input */}
+                            <input
+                                className="bg-black/5 dark:bg-white/5 w-full py-1.5 px-3 rounded-lg grid place-items-center text-slate-600 dark:text-slate-300"
+                                type="text"
+                                value="marcosdamian054@gmail.com"
+                            />
+                            {/* Email Input */}
+                            {/* Email Buttons */}
+                            <div className="flex gap-2">
+                                <div className="relative group/tooltip">
+                                    <a href="mailto:marcosdamian054@gmail.com" target="_blank" rel="noreferrer" className="flex bg-indigo-100 hover:bg-opacity-80 dark:bg-indigo-500 hover:dark:bg-opacity-90 text-indigo-500 dark:text-indigo-100 py-2.5 px-4 rounded-lg">
+                                        <div className="text-lg">
+                                            <FontAwesomeIcon icon={faPaperPlane} />
+                                        </div>
+                                    </a>
+                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full 
+                                    -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md 
+                                    whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 
+                                    before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 
+                                    before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 
+                                    before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 
+                                    group-hover/tooltip:-translate-y-3">
+                                    Send me an Email
+                                    </span>
+                                </div>
+                            </div>
+                            {/* Email Buttons */}
+                        </div>
+                    </section>
+                    {/* Email section*/}
                 </main>
             </div>
             {/* Main */}
