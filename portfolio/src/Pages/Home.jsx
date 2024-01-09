@@ -1,14 +1,19 @@
 import { useEffect, useState, useRef } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import copy from 'clipboard-copy';
 import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
+import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
+import HenryIcon from '../assets/HenryIcon.png'
+import SoyHenryIcon from '../assets/SoyHenryIcon.jpg'
+import HenrySquareIcon from '../assets/HenrySquareIcon.png'
 import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
 import tailwindIcon from "../assets/tailwind-svgrepo-com.svg";
 import HTML5Icon from "../assets/html-5-svgrepo-com.svg";
 import MongoDBIcon from "../assets/mongo-svgrepo-com.svg";
 import reactIcon from "../assets/react-svgrepo-com.svg";
 import "../index.css";
-
 
 const Home = () => {
     const [theme, setTheme] = useState(() => {
@@ -19,6 +24,10 @@ const Home = () => {
     })
 
     const [scrollPast, setScrollPast] = useState(false);
+    const [tooltipText, setTooltipText] = useState('Copy email');
+    const [showTooltip, setShowTooltip] = useState(false);
+
+    const copiedText = 'marcosdamian054@gmail.com';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -51,6 +60,26 @@ const Home = () => {
     };
     const bounceInStyle = {
         animation: 'bounceIn 1s forwards',
+    };
+    const textToClipboard = () => {
+        copy(copiedText)
+            .then(() => {
+                setTooltipText('Email copied succesfully!');
+                setShowTooltip(true);
+                setTimeout(() => {
+                    setTooltipText('Copy email');
+                    setShowTooltip(false);
+                }, 3000);
+            })
+            .catch((error) => {
+                console.error('Error copying to clipboard: ', error);
+                setTooltipText('Error copying Email');
+                setShowTooltip(true);
+                setTimeout(() => {
+                    setTooltipText('Copy email');
+                    setShowTooltip(false);
+                }, 3000);
+            });
     };
 
     return (
@@ -105,7 +134,21 @@ const Home = () => {
                             {/* Presentation title */}
 
                             {/* Social media Buttons */}
-                            <div className="flex gap-3"></div>
+                            <div className="flex gap-3">
+                                <a className="flex mt-2 items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark text-sky-600 border-2 border-gray-700 dark:hover:border-2 dark:hover:border-blue-400 transition" href="https://www.linkedin.com/in/medina-marcos-developer/">
+                                    <FontAwesomeIcon icon={faLinkedin} />
+                                    <h2>Linkedin</h2>
+                                </a>
+                                <a className="flex mt-2 items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark transition dark:text-purple-400 dark:border-2 dark:border-gray-700 dark:hover:border-purple-600 dark:hover:text-purple-400" href="https://github.com/Marcos1D9">
+                                    <FontAwesomeIcon icon={faGithub} className="text-purple-400" />
+                                    <h2>Github</h2>
+                                </a>
+                                <a className="flex mt-2 items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark transition dark:text-yellow-300 dark:border-2 dark:border-gray-700 dark:hover:border-yellow-300 dark:hover:text-yellow-300" href="https://www.talent.soyhenry.com/candidate/5486">
+                                    <img src={HenryTalentIcon} className="h-7 dark:hidden"/>
+                                    <img src={HenrySquareIcon} className="h-6 hidden dark:flex"/>
+                                    <h2>Henry Talent</h2>
+                                </a>
+                            </div>
                             {/* Social media Buttons */}
                         </div>
                         {/* About presentation */}
@@ -259,14 +302,19 @@ const Home = () => {
                                 {/* Send email button */}
                                 {/* Copy email button */}
                                 <div className="relative group/tooltip">
-                                    <button className="flex bg-indigo-100 hover:bg-opacity-80 dark:bg-indigo-500 hover:dark:bg-opacity-90 text-indigo-500 dark:text-indigo-100 py-2.5 px-4 rounded-lg">
+                                    <button className="flex bg-indigo-100 hover:bg-opacity-80 dark:bg-indigo-500 hover:dark:bg-opacity-90 text-indigo-500 dark:text-indigo-100 py-2.5 px-4 rounded-lg"
+                                        onClick={textToClipboard}
+                                    >
                                         <div className="text-lg">
                                             <FontAwesomeIcon icon={faCopy} />
                                         </div>
                                     </button>
-                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">
-                                        Copy email
-                                    </span>
+                                    {setShowTooltip && (
+                                        <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">
+                                            {tooltipText}
+                                        </span>
+                                    )}
+
                                 </div>
                                 {/* Copy email button */}
                             </div>
