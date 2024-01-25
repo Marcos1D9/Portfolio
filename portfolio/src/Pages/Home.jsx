@@ -14,6 +14,7 @@ import HTML5Icon from "../assets/html-5-svgrepo-com.svg";
 import MongoDBIcon from "../assets/mongo-svgrepo-com.svg";
 import reactIcon from "../assets/react-svgrepo-com.svg";
 import "../index.css";
+import Tooltip from "../components/Tooltip";
 
 const Home = () => {
     const [theme, setTheme] = useState(() => {
@@ -225,23 +226,47 @@ const Home = () => {
                                     <article class="relative flex flex-col justify-between w-full py-6 px-7">
                                         {/* Munia project */}
                                         <h2 class="text-gray-700 dark:text-gray-200 text-lg font-bold">Munia Sesiones 1:1</h2>
-                                        <p class="text-slate-400 dark:text-slate-200">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
+                                        <p class="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
 
                                         {/* Project technologies icons */}
-                                        <div class="flex gap-1 mt-1.5 items-center pt-3 pb-6">
-                                            <div class="relative group/tooltip">
-                                                <img src={HTML5Icon} className="w-8" alt="" />
-                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
+                                        <div class="flex gap-1 mt-1.5 justify-center items-center pt-3 pb-6">
+                                            <div className="flex flex-row items-center">
+                                                <div class="relative group/tooltip">
+                                                    <img src={HTML5Icon} className="w-8" alt="" />
+                                                    <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
+                                                </div>
+                                                <div class="relative group/tooltip">
+                                                    <img src={tailwindIcon} className="w-9" alt="" />
+                                                    <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Tailwind</span>
+                                                </div>
+                                                <div class="relative group/tooltip">
+                                                    <img src={reactIcon} className="w-8" alt="" />
+                                                    <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
+                                                </div>
                                             </div>
-                                            <div class="relative group/tooltip">
-                                                <img src={tailwindIcon} className="w-9" alt="" />
-                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Tailwind</span>
-                                            </div>
-                                            <div class="relative group/tooltip">
-                                                <img src={reactIcon} className="w-8" alt="" />
-                                                <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
+                                            <div className="flex flex-row items-center ml-36">
+                                                <a className="flex relative group/tooltip items-center gap-1 font-bold px-5 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark text-sky-600 border-2 border-gray-700 dark:hover:border-2 dark:hover:border-blue-400 transition" href="https://www.linkedin.com/company/munia-co/">
+                                                    <FontAwesomeIcon icon={faLinkedin} />
+                                                    <h2>Linkedin</h2>
+                                                    <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-blue-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-blue-400 dark:text-blue-400 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
+                                                        Go check my LinkedIn profile :D
+                                                    </span>
+                                                    <div className="h-3 w-4 left-1/2 opacity-0 bottom-10 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 transition-all absolute">
+                                                        <div className=" h-3 w-3 absolute -left-1/2 rounded-sm dark:bg-slate-800 dark:border-blue-600 dark:border-2 opacity-0 group-hover/tooltip:opacity-100 transition-all> -rotate-45 transform origin-top-left"></div>
+                                                    </div>
+                                                </a>
+                                                <a className="flex relative group/tooltip items-center gap-1 font-bold px-5 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark text-red-200 border-2 border-gray-700 dark:hover:border-2 dark:hover:border-orange-200 transition" href="https://munia.co/">
+                                                    <h2>Main official website</h2>
+                                                    <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-blue-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-orange-300 dark:text-red-200 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
+                                                        Munia's main official website
+                                                    </span>
+                                                    <div className="h-3 w-4 flex flex-col justify-center left-1/2 bottom-10 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 transition-all overflow-hidden absolute">
+                                                        <div className=" h-3 w-3 rounded-sm dark:bg-slate-800 dark:border-orange-300 dark:border-2 opacity-0 group-hover/tooltip:opacity-100 transition-all> -rotate-45 transform origin-top-left"></div>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
+                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Must contact Munia for register)</p>
                                         {/* Project technologies icons */}
                                         <img className="rounded-2xl" src={MuniaLoginPic} alt="MuniaLoginPic" />
                                         <div class="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
@@ -255,9 +280,9 @@ const Home = () => {
 
                                 {/* Grow-Up project */}
                                 <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" class="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
-                                    <article class="relative flex flex-col justify-between w-full py-6 px-7">
+                                    <article class="relative flex flex-col justify-between w-full py-6 px-7 ">
                                         <h2 class="text-gray-700 dark:text-gray-200 text-lg font-bold">Grow-Up Books E-commerce</h2>
-                                        <p class="text-slate-400 dark:text-slate-200">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
+                                        <p class="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
                                         {/* Project technologies icons */}
                                         <div class="flex gap-1 mt-1.5 items-center pt-3 pb-6">
                                             <div class="relative group/tooltip">
@@ -273,6 +298,7 @@ const Home = () => {
                                                 <span class="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
+                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click Youtube button for fullscreen)</p>
                                         {/* Project technologies icons */}
                                         <iframe width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                         <div class="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
@@ -346,7 +372,7 @@ const Home = () => {
                     </section>
                     {/* Email section*/}
                 </main>
-            </div>
+            </div >
             {/* Main */}
         </>
     )
