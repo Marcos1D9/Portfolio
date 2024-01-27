@@ -135,8 +135,8 @@ const Home = () => {
                             {/* Presentation title */}
 
                             {/* Social media Buttons */}
-                            <div className="flex gap-3 ">
-                                <a className="flex mt-2 relative group/tooltip items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark text-sky-600 border-2 border-gray-700 dark:hover:border-2 dark:hover:border-blue-400 transition" href="https://www.linkedin.com/in/medina-marcos-developer/">
+                            <div className="flex gap-3 mt-3">
+                                <a className="flex relative group/tooltip items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark text-sky-600 border-2 border-gray-700 dark:hover:border-2 dark:hover:border-blue-400 transition" href="https://www.linkedin.com/in/medina-marcos-developer/">
                                     <FontAwesomeIcon icon={faLinkedin} />
                                     <h2>Linkedin</h2>
                                     <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-blue-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-blue-400 dark:text-blue-400 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
@@ -148,7 +148,7 @@ const Home = () => {
 
                                 </a>
 
-                                <a className="flex relative group/tooltip mt-2 items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark transition dark:text-purple-400 dark:border-2 dark:border-gray-700 dark:hover:border-purple-600 dark:hover:text-purple-400" href="https://github.com/Marcos1D9">
+                                <a className="flex relative group/tooltip items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark transition dark:text-purple-400 dark:border-2 dark:border-gray-700 dark:hover:border-purple-600 dark:hover:text-purple-400" href="https://github.com/Marcos1D9">
                                     <FontAwesomeIcon icon={faGithub} className="text-purple-400" />
                                     <h2>Github</h2>
                                     <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-purple-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-purple-400 dark:text-purple-400 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
@@ -158,17 +158,25 @@ const Home = () => {
                                         <div className=" h-3 w-3  rounded-sm dark:bg-slate-800 dark:border-purple-600 dark:border-2 opacity-0 group-hover/tooltip:opacity-100 transition-all> -rotate-45 transform origin-top-left"></div>
                                     </div>
                                 </a>
-                                <a className="flex mt-2 relative group/tooltip items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark transition dark:text-yellow-300 dark:border-2 dark:border-gray-700 dark:hover:border-yellow-300 dark:hover:text-yellow-300" href="https://www.talent.soyhenry.com/candidate/5486">
-                                    <img src={HenryTalentIcon} className="h-7 dark:hidden" />
-                                    <img src={HenrySquareIcon} className="h-6 hidden dark:flex" />
-                                    <h2>Henry Talent</h2>
-                                    <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-yellow-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-yellow-400 dark:text-yellow-400 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
-                                        Register here to see my Henry graduated profile!
-                                    </span>
-                                    <div className="w-16 left-16 bottom-10 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 transition-all overflow-hidden absolute">
-                                        <div className=" h-3 w-3 rounded-sm dark:bg-slate-800 dark:border-yellow-500 dark:border-2 opacity-0 group-hover/tooltip:opacity-100 transition-all> -rotate-45 transform origin-top-left"></div>
-                                    </div>
-                                </a>
+                                <Tooltip
+                                    link="https://www.talent.soyhenry.com/candidate/5486"
+                                    icon="HenryTalentIcon"
+                                    mainText="Henry Talent"
+                                    tooltipSpan="Register here to see my Henry graduated profile!"
+                                    henryIcon={HenryTalentIcon}
+                                    darkHenryIcon={HenrySquareIcon}
+                                    darkTooltipText="dark:text-yellow-400"
+                                    darkTooltipBackground="dark:bg-gray-800"
+                                    darkTooltipBorder="dark:border-yellow-400"
+                                    darkButtonTextColor="dark:text-yellow-300"
+                                    darkButtonBackgroundColor="dark:bg-gray-800"
+                                    darkButtonBorderColor="dark:border-gray-700"
+                                    darkHoverButtonBorderColor="dark:hover:border-yellow-300"
+                                    darkPointerBackground="dark:bg-gray-800"
+                                    darkPointerBorder="dark:border-yellow-500"
+                                    buttonXPadding="px-4"
+                                    buttonHeight="h-14"
+                                />
                             </div>
                             {/* Social media Buttons */}
                         </div>
@@ -243,18 +251,20 @@ const Home = () => {
                                             </div>
                                             <div className="flex flex-row items-center ml-36">
                                                 <Tooltip
-                                                link="https://munia.co/"
-                                                mainText="Main official website"
-                                                tooltipSpan="Munia's main official website"
-                                                darkTooltipText="dark:text-orange-300"
-                                                darkTooltipBackground="dark:bg-gray-800"
-                                                darkTooltipBorder="dark:border-orange-300"
-                                                darkButtonTextColor="dark:text-orange-200"
-                                                darkButtonBackgroundColor="dark:bg-gray-800"
-                                                darkButtonBorderColor="dark:border-gray-700"
-                                                darkHoverButtonBorderColor="dark:hover:border-orange-200"
-                                                darkPointerBackground="dark:bg-gray-800"
-                                                darkPointerBorder="dark:border-orange-300/50"
+                                                    link="https://munia.co/"
+                                                    mainText="Main official website"
+                                                    tooltipSpan="Munia's main official website"
+                                                    darkTooltipText="dark:text-orange-300"
+                                                    darkTooltipBackground="dark:bg-gray-800"
+                                                    darkTooltipBorder="dark:border-orange-300"
+                                                    darkButtonTextColor="dark:text-orange-200"
+                                                    darkButtonBackgroundColor="dark:bg-gray-800"
+                                                    darkButtonBorderColor="dark:border-gray-700"
+                                                    darkHoverButtonBorderColor="dark:hover:border-orange-200"
+                                                    darkPointerBackground="dark:bg-gray-800"
+                                                    darkPointerBorder="dark:border-orange-300/50"
+                                                    buttonXPadding="px-7"
+                                                    buttonHeight="h-14"
                                                 />
                                             </div>
                                         </div>
