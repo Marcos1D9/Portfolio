@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copy from 'clipboard-copy';
 import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import HenryIcon from '../assets/HenryIcon.png'
@@ -136,31 +136,42 @@ const Home = () => {
 
                             {/* Social media Buttons */}
                             <div className="flex gap-3 mt-3">
-                                <a className="flex relative group/tooltip items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark text-sky-600 border-2 border-gray-700 dark:hover:border-2 dark:hover:border-blue-400 transition" href="https://www.linkedin.com/in/medina-marcos-developer/">
-                                    <FontAwesomeIcon icon={faLinkedin} />
-                                    <h2>Linkedin</h2>
-                                    <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-blue-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-blue-400 dark:text-blue-400 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
-                                        Go check my LinkedIn profile :D
-                                    </span>
-                                    <div className="w-16 left-11 bottom-10 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 transition-all overflow-hidden absolute">
-                                        <div className=" h-3 w-3 rounded-sm dark:bg-slate-800 dark:border-blue-600 dark:border-2 opacity-0 group-hover/tooltip:opacity-100 transition-all> -rotate-45 transform origin-top-left"></div>
-                                    </div>
-
-                                </a>
-
-                                <a className="flex relative group/tooltip items-center gap-1 font-bold px-3 h-14 rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark transition dark:text-purple-400 dark:border-2 dark:border-gray-700 dark:hover:border-purple-600 dark:hover:text-purple-400" href="https://github.com/Marcos1D9">
-                                    <FontAwesomeIcon icon={faGithub} className="text-purple-400" />
-                                    <h2>Github</h2>
-                                    <span className="absolute pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-purple-400 bg-gray-800 dark:bg-slate-800 dark:border dark:border-purple-400 dark:text-purple-400 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20">
-                                        Click here if you are a dev ;)
-                                    </span>
-                                    <div className="w-16 left-10 bottom-10 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 transition-all overflow-hidden absolute">
-                                        <div className=" h-3 w-3  rounded-sm dark:bg-slate-800 dark:border-purple-600 dark:border-2 opacity-0 group-hover/tooltip:opacity-100 transition-all> -rotate-45 transform origin-top-left"></div>
-                                    </div>
-                                </a>
+                                <Tooltip
+                                link="https://github.com/Marcos1D9"
+                                mainText="Linkedin"
+                                tooltipSpan="Go check my LinkedIn profile :D"
+                                linkedinIcon={faLinkedin}
+                                darkTooltipText="dark:text-blue-400"
+                                darkTooltipBackground="dark:bg-gray-800"
+                                darkTooltipBorder="dark:border-blue-400"
+                                darkButtonTextColor="dark:text-blue-500"
+                                darkButtonBackgroundColor="dark:bg-gray-800"
+                                darkButtonBorderColor="dark:border-gray-700"
+                                darkHoverButtonBorderColor="dark:hover:border-blue-400"
+                                darkPointerBackground="dark:bg-gray-800"
+                                darkPointerBorder="dark:border-blue-500"
+                                buttonXPadding="px-6"
+                                buttonHeight="h-14"
+                                />
+                                <Tooltip
+                                link="https://github.com/Marcos1D9"
+                                mainText="Github"
+                                tooltipSpan="Click here if you are a dev ;)"
+                                githubIcon={faGithub}
+                                darkTooltipText="dark:text-purple-400"
+                                darkTooltipBackground="dark:bg-gray-800"
+                                darkTooltipBorder="dark:border-purple-400"
+                                darkButtonTextColor="dark:text-purple-500"
+                                darkButtonBackgroundColor="dark:bg-gray-800"
+                                darkButtonBorderColor="dark:border-gray-700"
+                                darkHoverButtonBorderColor="dark:hover:border-purple-400"
+                                darkPointerBackground="dark:bg-gray-800"
+                                darkPointerBorder="dark:border-purple-500"
+                                buttonXPadding="px-5"
+                                buttonHeight="h-14"
+                                />
                                 <Tooltip
                                     link="https://www.talent.soyhenry.com/candidate/5486"
-                                    icon="HenryTalentIcon"
                                     mainText="Henry Talent"
                                     tooltipSpan="Register here to see my Henry graduated profile!"
                                     henryIcon={HenryTalentIcon}
@@ -174,7 +185,7 @@ const Home = () => {
                                     darkHoverButtonBorderColor="dark:hover:border-yellow-300"
                                     darkPointerBackground="dark:bg-gray-800"
                                     darkPointerBorder="dark:border-yellow-500"
-                                    buttonXPadding="px-4"
+                                    buttonXPadding="px-5"
                                     buttonHeight="h-14"
                                 />
                             </div>
