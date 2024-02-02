@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copy from 'clipboard-copy';
 import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import HenryIcon from '../assets/HenryIcon.png'
@@ -111,7 +111,7 @@ const Home = () => {
 
 
             {/* Main */}
-            <div className="mx-auto max-w-3xl px-5 mb-5 flex flex-col gap-10"   >
+            <div className="mx-auto max-w-3xl px-5 mb-5 flex flex-col gap-10">
                 <main className="flex flex-col gap-16">
                     {/* Hero presentation */}
                     <section className="flex flex-col sm:flex-row items-center gap-5" >
@@ -137,56 +137,59 @@ const Home = () => {
                             {/* Social media Buttons */}
                             <div className="flex gap-3 mt-3">
                                 <Tooltip
-                                link="https://github.com/Marcos1D9"
-                                mainText="Linkedin"
-                                tooltipSpan="Go check my LinkedIn profile :D"
-                                linkedinIcon={faLinkedin}
-                                darkTooltipText="dark:text-blue-400"
-                                darkTooltipBackground="dark:bg-gray-800"
-                                darkTooltipBorder="dark:border-blue-400"
-                                darkButtonTextColor="dark:text-blue-500"
-                                darkButtonBackgroundColor="dark:bg-gray-800"
-                                darkButtonBorderColor="dark:border-gray-700"
-                                darkHoverButtonBorderColor="dark:hover:border-blue-400"
-                                darkPointerBackground="dark:bg-gray-800"
-                                darkPointerBorder="dark:border-blue-500"
-                                buttonXPadding="px-6"
-                                buttonHeight="h-14"
+                                    link="https://github.com/Marcos1D9"
+                                    mainText="Linkedin"
+                                    tooltipSpan="Go check my LinkedIn profile :D"
+                                    linkedinIcon={faLinkedin}
+                                    tooltipText="dark:text-blue-400 text-blue-500 font-bold"
+                                    tooltipBackground="bg-gradient-to-b from-white to-blue-100 dark:bg-gray-800 dark:bg-none"
+                                    tooltipBorder="dark:border-blue-400 border-blue-500"
+                                    buttonTextColor="dark:text-blue-500 text-blue-500"
+                                    buttonBackgroundColor="dark:bg-gray-800 bg-white"
+                                    buttonBorderColor="dark:border-gray-700 border-gray-200"
+                                    hoverButtonBorderColor="dark:hover:border-blue-400 hover:border-blue-400 active:border-blue-300"
+                                    pointerBackground="dark:bg-gray-800 bg-blue-400"
+                                    pointerBorder="dark:border-blue-500 border-2 border-blue-400"
+                                    buttonXPadding="px-6"
+                                    buttonHeight="h-14"
+                                    buttonFlexProps="justify-center items-center"
                                 />
                                 <Tooltip
-                                link="https://github.com/Marcos1D9"
-                                mainText="Github"
-                                tooltipSpan="Click here if you are a dev ;)"
-                                githubIcon={faGithub}
-                                darkTooltipText="dark:text-purple-400"
-                                darkTooltipBackground="dark:bg-gray-800"
-                                darkTooltipBorder="dark:border-purple-400"
-                                darkButtonTextColor="dark:text-purple-500"
-                                darkButtonBackgroundColor="dark:bg-gray-800"
-                                darkButtonBorderColor="dark:border-gray-700"
-                                darkHoverButtonBorderColor="dark:hover:border-purple-400"
-                                darkPointerBackground="dark:bg-gray-800"
-                                darkPointerBorder="dark:border-purple-500"
-                                buttonXPadding="px-5"
-                                buttonHeight="h-14"
+                                    link="https://github.com/Marcos1D9"
+                                    mainText="Github"
+                                    tooltipSpan="Click here if you are a dev ;)"
+                                    githubIcon={faGithub}
+                                    tooltipText="dark:text-purple-400"
+                                    tooltipBackground="dark:bg-gray-800"
+                                    tooltipBorder="dark:border-purple-400"
+                                    buttonTextColor="dark:text-purple-500"
+                                    buttonBackgroundColor="dark:bg-gray-800"
+                                    buttonBorderColor="dark:border-gray-700"
+                                    hoverButtonBorderColor="dark:hover:border-purple-400"
+                                    pointerBackground="dark:bg-gray-800"
+                                    pointerBorder="dark:border-purple-500"
+                                    buttonXPadding="px-5"
+                                    buttonHeight="h-14"
+                                    buttonFlexProps="justify-center items-center"
                                 />
                                 <Tooltip
                                     link="https://www.talent.soyhenry.com/candidate/5486"
                                     mainText="Henry Talent"
                                     tooltipSpan="Register here to see my Henry graduated profile!"
-                                    henryIcon={HenryTalentIcon}
-                                    darkHenryIcon={HenrySquareIcon}
-                                    darkTooltipText="dark:text-yellow-400"
-                                    darkTooltipBackground="dark:bg-gray-800"
-                                    darkTooltipBorder="dark:border-yellow-400"
-                                    darkButtonTextColor="dark:text-yellow-300"
-                                    darkButtonBackgroundColor="dark:bg-gray-800"
-                                    darkButtonBorderColor="dark:border-gray-700"
-                                    darkHoverButtonBorderColor="dark:hover:border-yellow-300"
-                                    darkPointerBackground="dark:bg-gray-800"
-                                    darkPointerBorder="dark:border-yellow-500"
+                                    henryTalent={HenryTalentIcon}
+                                    henrySquare={HenrySquareIcon}
+                                    tooltipText="dark:text-yellow-400"
+                                    tooltipBackground="dark:bg-gray-800"
+                                    tooltipBorder="dark:border-yellow-400"
+                                    buttonTextColor="dark:text-yellow-300"
+                                    buttonBackgroundColor="dark:bg-gray-800"
+                                    buttonBorderColor="dark:border-gray-700"
+                                    hoverButtonBorderColor="dark:hover:border-yellow-300"
+                                    pointerBackground="dark:bg-gray-800"
+                                    pointerBorder="dark:border-yellow-500"
                                     buttonXPadding="px-5"
                                     buttonHeight="h-14"
+                                    buttonFlexProps="justify-center items-center"
                                 />
                             </div>
                             {/* Social media Buttons */}
@@ -245,41 +248,43 @@ const Home = () => {
                                         <p className="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
 
                                         {/* Project technologies icons */}
-                                        <div className="flex gap-1 mt-1.5 justify-center items-center pt-3 pb-6">
-                                            <div className="flex flex-row items-center">
+                                        <div className="flex mt-1.5 justify-start items-center pt-3 pb-6">
+                                            <div className="flex flex-row items-center gap-1">
                                                 <div className="relative group/tooltip">
                                                     <img src={HTML5Icon} className="w-8" alt="" />
-                                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
+                                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                                 </div>
                                                 <div className="relative group/tooltip">
                                                     <img src={tailwindIcon} className="w-9" alt="" />
-                                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Tailwind</span>
+                                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Tailwind</span>
                                                 </div>
                                                 <div className="relative group/tooltip">
                                                     <img src={reactIcon} className="w-8" alt="" />
-                                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
+                                                    <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                                 </div>
-                                            </div>
-                                            <div className="flex flex-row items-center ml-36">
-                                                <Tooltip
-                                                    link="https://munia.co/"
-                                                    mainText="Main official website"
-                                                    tooltipSpan="Munia's main official website"
-                                                    darkTooltipText="dark:text-orange-300"
-                                                    darkTooltipBackground="dark:bg-gray-800"
-                                                    darkTooltipBorder="dark:border-orange-300"
-                                                    darkButtonTextColor="dark:text-orange-200"
-                                                    darkButtonBackgroundColor="dark:bg-gray-800"
-                                                    darkButtonBorderColor="dark:border-gray-700"
-                                                    darkHoverButtonBorderColor="dark:hover:border-orange-200"
-                                                    darkPointerBackground="dark:bg-gray-800"
-                                                    darkPointerBorder="dark:border-orange-300/50"
-                                                    buttonXPadding="px-7"
-                                                    buttonHeight="h-14"
-                                                />
                                             </div>
                                         </div>
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Must contact Munia for register)</p>
+                                        <div className="flex flex-row mb-3">
+                                            <Tooltip
+                                                link="https://munia.co/"
+                                                mainText="Main official website"
+                                                tooltipSpan="Munia's main official website"
+                                                tooltipText="dark:text-orange-300"
+                                                tooltipBackground="dark:bg-gray-800"
+                                                tooltipBorder="dark:border-orange-300"
+                                                buttonTextColor="dark:text-orange-200"
+                                                buttonBackgroundColor="dark:bg-gray-800"
+                                                buttonBorderColor="dark:border-gray-700"
+                                                hoverButtonBorderColor="dark:hover:border-orange-200"
+                                                pointerBackground="dark:bg-gray-800"
+                                                pointerBorder="dark:border-orange-300/50"
+                                                buttonXPadding="px-6"
+                                                buttonWidth="w-full"
+                                                buttonFlexProps="justify-center items-center"
+                                                buttonHeight="h-10"
+                                            />
+                                        </div>
                                         {/* Project technologies icons */}
                                         <img className="rounded-2xl" src={MuniaLoginPic} alt="MuniaLoginPic" />
                                         <div className="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
@@ -300,15 +305,16 @@ const Home = () => {
                                         <div className="flex gap-1 mt-1.5 items-center pt-3 pb-6">
                                             <div className="relative group/tooltip">
                                                 <img src={HTML5Icon} className="w-8" alt="" />
-                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium
+                                                before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                             </div>
                                             <div className="relative group/tooltip">
                                                 <img src={MongoDBIcon} className="w-8" alt="" />
-                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Mongo DB</span>
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">Mongo DB</span>
                                             </div>
                                             <div className="relative group/tooltip">
                                                 <img src={reactIcon} className="w-8" alt="" />
-                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
+                                                <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click Youtube button for fullscreen)</p>
