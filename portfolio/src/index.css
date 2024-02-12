@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply bg-white dark:bg-gray-800 pb-0 sm:pb-6 bg-opacity-25
+        @apply bg-white dark:bg-gray-800 mx-auto max-[300px]:-mr-10 max-xxxs:-mr-20 bg-opacity-25
     }
 
     h1 {

@@ -85,39 +85,50 @@ const Home = () => {
 
     return (
         <>
-            {/* Navbar */}
-            <div className="mx-auto max-w-3xl sticky top-0 z-10">
-                <header className={`flex flex-row items-center justify-between py-1 px-5 z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
+            {/* Navbar start */}
+            <div className="max-w-full min-w-5xl flex flex-col justify-center sticky top-0 z-10 max-[293px]: ">
+                <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
+                    {/* Navbar profile pic logo start */}
                     <div style={scrollPast ? bounceInStyle : null} className={`flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
-                        <div className={`flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
+                        {/* Navbar profile pic circle start */}
+                        <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
                             <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
+                                {/* Navbar profile pic start */}
                                 <img className="rounded-full drop-shadow-2xl" src={NewProfilePicWithBackground} />
+                                {/* Navbar profile pic end */}
                             </span>
                         </div>
-                        Marcos Damián E. Medina
+                        {/* Navbar profile pic circle end */}
+
+                        {/* Navbar text start */}
+                        <h2 className="text-center max-xxxs:text-sm">Marcos Damián E. Medina</h2>
+                        {/* Navbar text end */}
                     </div>
+                    {/* Navbar profile pic logo end */}
+                    {/* Navbar profile theme button start */}
                     <button className="py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
-                        <div className="text-4xl dark:hidden text-slate-700">
+                        <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
                             <FontAwesomeIcon icon={faMoon} />
                         </div>
-                        <div className="text-4xl hidden dark:block text-slate-100">
+                        <div className="text-4xl flex-nowrap hidden dark:block text-slate-100">
                             <FontAwesomeIcon icon={faSun} />
                         </div>
                     </button>
+                    {/* Navbar profile theme button end */}
                 </header>
             </div>
 
-            {/* NavBar */}
+            {/* NavBar end */}
 
 
-            {/* Main */}
-            <div className="mx-auto max-w-3xl px-5 mb-5 flex flex-col gap-10">
+            {/* Main start */}
+            <div className="max-w-3xl min-w-3xl md:mx-auto flex-col mb-5 flex gap-10 px-8">
                 <main className="flex flex-col gap-16">
-                    {/* Hero presentation */}
-                    <section className="flex flex-col sm:flex-row items-center gap-5" >
+                    {/* Hero presentation start */}
+                    <section className="flex flex-col md:flex-row items-center gap-5 shrink-0" >
 
                         {/* Profile Pic */}
-                        <div className="relative w-44 h-44 bg-none dark:bg-none border-8 border-white dark:border-gray-900/80 shadow-lg rounded-full overflow-hidden">
+                        <div className="shrink-0 relative w-44 h-44  bg-none dark:bg-none border-8 border-white dark:border-gray-900/80 shadow-lg rounded-full overflow-hidden">
                             <span>
                                 <img alt="Profile picture" src={NewProfilePicWithBackground} />
                             </span>
@@ -125,52 +136,52 @@ const Home = () => {
                         {/* Profile Pic */}
 
                         {/* About presentation */}
-                        <div className="flex flex-col items-center sm:items-start gap-3">
+                        <div className="flex flex-col items-center gap-3 shrink-0">
 
                             {/* Presentation title */}
-                            <div className="flex flex-col items-left gap-2">
-                                <h1 className="text-2xl sm:text-4xl text-center sm:text-left font-bold text-slate-600 dark:text-slate-100">Marcos Damián E. Medina</h1>
-                                <p className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl rounded-2xl">Welcome! I'm a passionate Web frontend developer</p>
+                            <div className="flex flex-col items-left gap-2 shrink-0">
+                                <h1 className="shrink-0 text-2xl md:text-4xl text-center md:text-left font-bold text-slate-600 dark:text-slate-100">Marcos Damián E. Medina</h1>
+                                <p className="shrink-0 text-center hyphens-auto text-slate-700 text-sm md:text-lg dark:text-slate-300 max-w-xl rounded-2xl">Welcome! I'm a passionate Web frontend developer</p>
                             </div>
                             {/* Presentation title */}
 
                             {/* Social media Buttons */}
-                            <div className="flex gap-3 mt-3">
+                            <div className="flex gap-3 mt-3 -mb-5 flex-wrap-reverse max-xs:mt-4 max-xs:-mb-5">
                                 <Tooltip
                                     link="https://github.com/Marcos1D9"
                                     mainText="Linkedin"
                                     tooltipSpan="Go check my LinkedIn profile :D"
                                     linkedinIcon={faLinkedin}
                                     tooltipText="dark:text-blue-400 text-blue-500 font-bold"
-                                    tooltipBackground="bg-gradient-to-b from-white to-blue-100 dark:bg-gray-800 dark:bg-none"
-                                    tooltipBorder="dark:border-blue-400 border-blue-500"
+                                    tooltipBackground="dark:bg-gray-800 dark:bg-none bg-white"
+                                    tooltipBorder="dark:border-blue-400 border-blue-500 border-2"
                                     buttonTextColor="dark:text-blue-500 text-blue-500"
                                     buttonBackgroundColor="dark:bg-gray-800 bg-white"
                                     buttonBorderColor="dark:border-gray-700 border-gray-200"
                                     hoverButtonBorderColor="dark:hover:border-blue-400 hover:border-blue-400 active:border-blue-300"
-                                    pointerBackground="dark:bg-gray-800 bg-blue-400"
+                                    pointerBackground="dark:bg-gray-800 bg-blue-300"
                                     pointerBorder="dark:border-blue-500 border-2 border-blue-400"
                                     buttonXPadding="px-6"
                                     buttonHeight="h-14"
-                                    buttonFlexProps="justify-center items-center"
+                                    buttonFlexProps="justify-center items-center grow"
                                 />
                                 <Tooltip
                                     link="https://github.com/Marcos1D9"
                                     mainText="Github"
                                     tooltipSpan="Click here if you are a dev ;)"
                                     githubIcon={faGithub}
-                                    tooltipText="dark:text-purple-400"
-                                    tooltipBackground="dark:bg-gray-800"
-                                    tooltipBorder="dark:border-purple-400"
-                                    buttonTextColor="dark:text-purple-500"
-                                    buttonBackgroundColor="dark:bg-gray-800"
-                                    buttonBorderColor="dark:border-gray-700"
-                                    hoverButtonBorderColor="dark:hover:border-purple-400"
-                                    pointerBackground="dark:bg-gray-800"
-                                    pointerBorder="dark:border-purple-500"
-                                    buttonXPadding="px-5"
+                                    tooltipText="dark:text-purple-400 text-purple-500 font-bold"
+                                    tooltipBackground="dark:bg-gray-800 dark:bg-none bg-white"
+                                    tooltipBorder="dark:border-purple-400 border-purple-500 border-2"
+                                    buttonTextColor="dark:text-purple-500 text-purple-600"
+                                    buttonBackgroundColor="dark:bg-gray-800 bg-white"
+                                    buttonBorderColor="dark:border-gray-700 border-gray-200"
+                                    hoverButtonBorderColor="dark:hover:border-purple-400 hover:border-purple-400 active:border-purple-300"
+                                    pointerBackground="dark:bg-gray-800 bg-purple-300"
+                                    pointerBorder="dark:border-purple-500 border-2 border-purple-400"
+                                    buttonXPadding="px-6"
                                     buttonHeight="h-14"
-                                    buttonFlexProps="justify-center items-center"
+                                    buttonFlexProps="justify-center items-center grow"
                                 />
                                 <Tooltip
                                     link="https://www.talent.soyhenry.com/candidate/5486"
@@ -178,18 +189,18 @@ const Home = () => {
                                     tooltipSpan="Register here to see my Henry graduated profile!"
                                     henryTalent={HenryTalentIcon}
                                     henrySquare={HenrySquareIcon}
-                                    tooltipText="dark:text-yellow-400"
-                                    tooltipBackground="dark:bg-gray-800"
-                                    tooltipBorder="dark:border-yellow-400"
-                                    buttonTextColor="dark:text-yellow-300"
-                                    buttonBackgroundColor="dark:bg-gray-800"
-                                    buttonBorderColor="dark:border-gray-700"
-                                    hoverButtonBorderColor="dark:hover:border-yellow-300"
-                                    pointerBackground="dark:bg-gray-800"
-                                    pointerBorder="dark:border-yellow-500"
-                                    buttonXPadding="px-5"
+                                    tooltipText="dark:text-yellow-300 text-gray-700 font-bold"
+                                    tooltipBackground="dark:bg-gray-800 dark:bg-none bg-white"
+                                    tooltipBorder="dark:border-yellow-300 border-gray-600 border-2"
+                                    buttonTextColor="dark:text-yellow-300 text-black"
+                                    buttonBackgroundColor="dark:bg-gray-800 bg-white"
+                                    buttonBorderColor="dark:border-gray-700 border-gray-200 border-2"
+                                    hoverButtonBorderColor="dark:hover:border-yellow-300 hover:border-black active:border-yellow-300"
+                                    pointerBackground="dark:bg-gray-800 bg-yellow-100"
+                                    pointerBorder="dark:border-yellow-400 border-gray-600 border"
+                                    buttonXPadding="px-6"
                                     buttonHeight="h-14"
-                                    buttonFlexProps="justify-center items-center"
+                                    buttonFlexProps="justify-center items-center  grow"
                                 />
                             </div>
                             {/* Social media Buttons */}
@@ -197,27 +208,28 @@ const Home = () => {
                         {/* About presentation */}
 
                     </section>
-                    {/* Hero presentation */}
-                    <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
-                    {/* Experience section */}
-                    <section className="w-full" id="hero-section">
+                    {/* Hero presentation end */}
+                    <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
+                    {/* Experience section start */}
+                    <section className="w-full shrink-0" id="hero-section">
 
-                        {/* Experience section title */}
-                        <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
-                            <h2>Experience</h2>
-                            <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
+                        {/* Experience section title start */}
+                        <header className="shrink-0 font-bold text-2xl underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-6 flex max-xxxs:pl-5 max-xxxs:mx-0 max-xxs:pl-5 max-xss:mx-0 gap-4 items-end ">
+                                <h2>Experience</h2>
+                                <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
                         </header>
-                        {/* Experience section title */}
+                        {/* Experience section title end */}
 
-                        {/* Experience Job title */}
-                        <div className="flex flex-col gap-10">
+                        {/* Experience section text start */}
+                        <div className="shrink-0  flex flex-col gap-10">
                             <div className="flex flex-col gap-5">
-                                <div className="flex flex-col gap-1 ">
+                                {/* Experience Job title start */}
+                                <div className="flex flex-col gap-1 max-xxxs:pl-5 max-xxs:pl-5 ">
                                     <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-200">Front-End Developer • Munia - Salud Mental y Emcional en el Trabajo</h2>
                                     <p className="text-sm text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
                                 </div>
+                                {/* Experience Job title end */}
 
-                                {/* Experience Job title */}
 
                                 {/* Experience Job description */}
                                 <ul className="list-disc flex flex-col gap-2 ml-5 text-slate-700 dark:text-gray-300 text-md">
@@ -229,25 +241,30 @@ const Home = () => {
                                 {/* Experience Job description */}
                             </div>
                         </div>
+                        {/* Experience section text end */}
                     </section>
-                    {/* Experience section */}
-                    {/* Projects */}
+                    {/* Experience section end*/}
+                    {/* Projects section start */}
                     <section className="w-full">
-                        {/* Projects title */}
-                        <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
+                        {/* Projects section title */}
+                        <header className="font-bold text-center text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex max-xxxs:pl-3 max-xxs:min-w-full min-[220px]:pl-5 max-xxs:justify-start max-xxs:px-0 items-center gap-3">
                             <h2>Projects</h2>
                             <FontAwesomeIcon icon={faStar} className="scale-110" />
                         </header>
-                        {/* Projects title */}
+                        {/* Projects section title */}
+                        {/* My projects */}
                         <div className="flex flex-col gap-10">
+                            {/* My projects container */}
                             <div className="grid gap-10">
-                                <a href="https://sesiones.munia.co/" target="_blank" rel="noreferrer" className="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
+                                {/* Munia project container*/}
+                                <a href="https://sesiones.munia.co/" target="_blank" rel="noreferrer" className="max-xxs:min-w-0 block group border-2 border-gray-200 hover:border-gray-300 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
                                     <article className="relative flex flex-col justify-between w-full py-6 px-7">
-                                        {/* Munia project */}
-                                        <h2 className="text-gray-700 dark:text-gray-200 text-lg font-bold">Munia Sesiones 1:1</h2>
+                                        {/* Munia project description */}
+                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">Munia Sesiones 1:1</h2>
                                         <p className="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
+                                        {/* Munia project description */}
 
-                                        {/* Project technologies icons */}
+                                        {/* Munia project technologies icons */}
                                         <div className="flex mt-1.5 justify-start items-center pt-3 pb-6">
                                             <div className="flex flex-row items-center gap-1">
                                                 <div className="relative group/tooltip">
@@ -265,41 +282,52 @@ const Home = () => {
                                             </div>
                                         </div>
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Must contact Munia for register)</p>
+
+                                        {/* Munia project redirect button */}
                                         <div className="flex flex-row mb-3">
                                             <Tooltip
                                                 link="https://munia.co/"
                                                 mainText="Main official website"
                                                 tooltipSpan="Munia's main official website"
-                                                tooltipText="dark:text-orange-300"
-                                                tooltipBackground="dark:bg-gray-800"
-                                                tooltipBorder="dark:border-orange-300"
-                                                buttonTextColor="dark:text-orange-200"
-                                                buttonBackgroundColor="dark:bg-gray-800"
-                                                buttonBorderColor="dark:border-gray-700"
-                                                hoverButtonBorderColor="dark:hover:border-orange-200"
-                                                pointerBackground="dark:bg-gray-800"
-                                                pointerBorder="dark:border-orange-300/50"
+                                                tooltipText="dark:text-orange-200 text-gray-800 font-bold"
+                                                tooltipBackground="dark:bg-gray-800 dark:bg-none bg-orange-100"
+                                                tooltipBorder="dark:border-orange-200 border-gray-800 border-2"
+                                                buttonTextColor="dark:text-orange-200 text-zinc-800"
+                                                buttonBackgroundColor="dark:bg-gray-800 bg-orange-200"
+                                                buttonBorderColor="dark:border-gray-700 border-gray-200"
+                                                hoverButtonBorderColor="dark:hover:border-orange-200 hover:border-zinc-500 active:border-zinc-300"
+                                                pointerBackground="dark:bg-gray-800 bg-orange-200"
+                                                pointerBorder="dark:border-orange-200 border-2 border-zinc-600"
                                                 buttonXPadding="px-6"
+                                                buttonHeight="h-10 max-xxxs:h-full"
                                                 buttonWidth="w-full"
                                                 buttonFlexProps="justify-center items-center"
-                                                buttonHeight="h-10"
                                             />
                                         </div>
-                                        {/* Project technologies icons */}
-                                        <img className="rounded-2xl" src={MuniaLoginPic} alt="MuniaLoginPic" />
-                                        <div className="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
+                                        {/* Munia project redirect button */}
+
+                                        {/* Munia project technologies icons */}
+
+                                        {/* Munia project login image */}
+                                        <img className="rounded-2xl h-30 border-r-4 border-zinc-400" src={MuniaLoginPic} alt="MuniaLoginPic" />
+                                        {/* Munia project login image */}
+
+                                        {/* Munia project square redirect icon */}
+                                        <div className="absolute grid place-items-center right-1 top-4 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-90
+                                        group-hover:opacity-80   transition-transform opacity-100 dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20">
                                             <div className=" text-gray-400 dark:text-gray-50 text-2xl">
                                                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                                             </div>
                                         </div>
+                                        {/* Munia project square redirect icon */}
                                     </article>
                                 </a>
-                                {/* Munia project */}
+                                {/* Munia project container*/}
 
-                                {/* Grow-Up project */}
+                                {/* Grow-Up project container*/}
                                 <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
                                     <article className="relative flex flex-col justify-between w-full py-6 px-7 ">
-                                        <h2 className="text-gray-700 dark:text-gray-200 text-lg font-bold">Grow-Up Books E-commerce</h2>
+                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">Grow-Up Books E-commerce</h2>
                                         <p className="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
                                         {/* Project technologies icons */}
                                         <div className="flex gap-1 mt-1.5 items-center pt-3 pb-6">
@@ -320,22 +348,27 @@ const Home = () => {
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click Youtube button for fullscreen)</p>
                                         {/* Project technologies icons */}
                                         <iframe width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-                                        <div className="absolute grid place-items-center right-3 top-3 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-transform dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20 shadow-sm">
+                                        <div className="absolute grid place-items-center right-1 top-4 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-90
+                                        group-hover:opacity-80 transition-transform opacity-100 dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20">
+                                            {/* Grow-up project square redirect icon */}
                                             <div className=" text-gray-400 dark:text-gray-50 text-2xl">
                                                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                                             </div>
+                                            {/* Grow-up project square redirect icon */}
                                         </div>
                                     </article>
                                 </a>
-                                {/* Grow-Up project */}
+                                {/* Grow-Up project container*/}
                             </div>
+                            {/* My projects container */}
                         </div>
+                        {/* My projects */}
                     </section>
-                    {/* Projects */}
-                    {/* Email section*/}
+                    {/* Projects section end */}
+                    {/* Email section start */}
                     <section className="w-full">
                         {/* Email Title */}
-                        <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex items-center gap-3">
+                        <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex max-xxs:justify-center max-[220px]:justify-start max-[220px]:pl-5 items-center gap-3">
                             <h2>Email</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
@@ -389,10 +422,10 @@ const Home = () => {
                             {/* Email Buttons */}
                         </div>
                     </section>
-                    {/* Email section*/}
+                    {/* Email section end*/}
                 </main>
             </div >
-            {/* Main */}
+            {/* Main end */}
         </>
     )
 }
