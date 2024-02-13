@@ -89,7 +89,7 @@ const Home = () => {
             <div className="max-w-full min-w-5xl flex flex-col justify-center sticky top-0 z-10 max-[293px]: ">
                 <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
                     {/* Navbar profile pic logo start */}
-                    <div style={scrollPast ? bounceInStyle : null} className={`flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
+                    <div style={scrollPast ? bounceInStyle : null} className={`md:ml-10 flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
                         {/* Navbar profile pic circle start */}
                         <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
                             <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
@@ -106,7 +106,7 @@ const Home = () => {
                     </div>
                     {/* Navbar profile pic logo end */}
                     {/* Navbar profile theme button start */}
-                    <button className="py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
+                    <button className="md:mr-10 py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
                         <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
                             <FontAwesomeIcon icon={faMoon} />
                         </div>
@@ -117,7 +117,6 @@ const Home = () => {
                     {/* Navbar profile theme button end */}
                 </header>
             </div>
-
             {/* NavBar end */}
 
 
