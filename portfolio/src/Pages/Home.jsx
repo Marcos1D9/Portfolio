@@ -3,10 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copy from 'clipboard-copy';
 import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
+import ProfilePic from '../assets/ProfilePic.jpg'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
-import HenryIcon from '../assets/HenryIcon.png'
-import SoyHenryIcon from '../assets/SoyHenryIcon.jpg'
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
 import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
 import tailwindIcon from "../assets/tailwind-svgrepo-com.svg";
@@ -94,7 +92,7 @@ const Home = () => {
                         <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
                             <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
                                 {/* Navbar profile pic start */}
-                                <img className="rounded-full drop-shadow-2xl" src={NewProfilePicWithBackground} />
+                                <img className="rounded-full drop-shadow-2xl" src={ProfilePic} />
                                 {/* Navbar profile pic end */}
                             </span>
                         </div>
@@ -129,7 +127,7 @@ const Home = () => {
                         {/* Profile Pic */}
                         <div className="shrink-0 relative w-44 h-44  bg-none dark:bg-none border-8 border-white dark:border-gray-900/80 shadow-lg rounded-full overflow-hidden">
                             <span>
-                                <img alt="Profile picture" src={NewProfilePicWithBackground} />
+                                <img alt="Profile picture" src={ProfilePic} />
                             </span>
                         </div>
                         {/* Profile Pic */}
