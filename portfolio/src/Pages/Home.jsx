@@ -3,10 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copy from 'clipboard-copy';
 import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import NewProfilePicWithBackground from '../assets/NewProfilePicWithBackground.png'
+import ProfilePic from '../assets/ProfilePic.jpg'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
-import HenryIcon from '../assets/HenryIcon.png'
-import SoyHenryIcon from '../assets/SoyHenryIcon.jpg'
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
 import MuniaLoginPic from '../assets/MuniaLoginPic.jpg'
 import tailwindIcon from "../assets/tailwind-svgrepo-com.svg";
@@ -83,18 +81,19 @@ const Home = () => {
             });
     };
 
+
     return (
         <>
             {/* Navbar start */}
             <div className="max-w-full min-w-5xl flex flex-col justify-center sticky top-0 z-10 max-[293px]: ">
                 <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
                     {/* Navbar profile pic logo start */}
-                    <div style={scrollPast ? bounceInStyle : null} className={`flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
+                    <div style={scrollPast ? bounceInStyle : null} className={`md:ml-10 flex items-center font-semibold text-lg text-center text-slate-600 dark:text-slate-300 transform transition-all duration-400 ${scrollPast ? '' : 'opacity-0'}`}>
                         {/* Navbar profile pic circle start */}
-                        <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center bg-indigo-100  dark:bg-gray-700/60 rounded-full shadow-md border-4 border-white dark:border-gray-900/80 ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className={`ml-2 shrink-0 flex w-12 h-12 mr-3 relative opacity-0 items-center dark:bg-gray-700/60 rounded-full border-2 shadow-indigo-600 border-black overflow-hidden dark:shadow-slate-700 dark:shadow-2xl dark:bg-none dark:border-black  ${scrollPast ? 'opacity-100' : 'opacity-0'}`}>
                             <span className="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;">
                                 {/* Navbar profile pic start */}
-                                <img className="rounded-full drop-shadow-2xl" src={NewProfilePicWithBackground} />
+                                <img className="rounded-full drop-shadow-2xl" src={ProfilePic} />
                                 {/* Navbar profile pic end */}
                             </span>
                         </div>
@@ -106,7 +105,7 @@ const Home = () => {
                     </div>
                     {/* Navbar profile pic logo end */}
                     {/* Navbar profile theme button start */}
-                    <button className="py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
+                    <button className="md:mr-10 py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
                         <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
                             <FontAwesomeIcon icon={faMoon} />
                         </div>
@@ -117,7 +116,6 @@ const Home = () => {
                     {/* Navbar profile theme button end */}
                 </header>
             </div>
-
             {/* NavBar end */}
 
 
@@ -128,9 +126,9 @@ const Home = () => {
                     <section className="flex flex-col md:flex-row items-center gap-5 shrink-0" >
 
                         {/* Profile Pic */}
-                        <div className="shrink-0 relative w-44 h-44  bg-none dark:bg-none border-8 border-white dark:border-gray-900/80 shadow-lg rounded-full overflow-hidden">
+                        <div className="shrink-0 relative w-44 h-44 bg-none shadow-lg border-2 shadow-indigo-300 border-black rounded-full overflow-hidden dark:shadow-slate-700 dark:shadow-2xl dark:bg-none  dark:border-black ">
                             <span>
-                                <img alt="Profile picture" src={NewProfilePicWithBackground} />
+                                <img className="aspect-square" alt="Profile picture" src={ProfilePic} />
                             </span>
                         </div>
                         {/* Profile Pic */}
@@ -309,7 +307,7 @@ const Home = () => {
                                         {/* Munia project technologies icons */}
 
                                         {/* Munia project login image */}
-                                        <img className="rounded-2xl h-30 border-r-4 border-zinc-400" src={MuniaLoginPic} alt="MuniaLoginPic" />
+                                        <img className="aspect-video rounded-2xl h-30 border-r-4 border-zinc-400" src={MuniaLoginPic} alt="MuniaLoginPic" />
                                         {/* Munia project login image */}
 
                                         {/* Munia project square redirect icon */}
@@ -347,7 +345,7 @@ const Home = () => {
                                         </div>
                                         <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click Youtube button for fullscreen)</p>
                                         {/* Project technologies icons */}
-                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                                        <iframe className="aspect-video" width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                         <div className="absolute grid place-items-center right-1 top-4 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-90
                                         group-hover:opacity-80 transition-transform opacity-100 dark:opacity-80 border-0 border-slate-100 border-indigo-100/50 dark:border-slate-200/20">
                                             {/* Grow-up project square redirect icon */}
