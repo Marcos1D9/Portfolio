@@ -326,7 +326,10 @@ const Home = () => {
                                 <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
                                     <article className="relative flex flex-col justify-between w-full py-6 px-7 ">
                                         <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">Grow-Up Books E-commerce</h2>
-                                        <p className="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
+                                        <p className="text-slate-400 dark:text-slate-200 mt-5">This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers.</p>
+                                        <p className="text-slate-400 dark:text-slate-200 mt-5">There's a video below that explains and cover most part of the website.</p>
+                                        <p className="text-slate-900 dark:text-slate-400 mt-5">(The mentioned video is in Spanish language, since it's my native language)</p>
+                                        
                                         {/* Project technologies icons */}
                                         <div className="flex gap-1 mt-1.5 items-center pt-3 pb-6">
                                             <div className="relative group/tooltip">
@@ -343,7 +346,7 @@ const Home = () => {
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
-                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click Youtube button for fullscreen)</p>
+                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click "Youtube" button on the video player for fullscreen)</p>
                                         {/* Project technologies icons */}
                                         <iframe className="aspect-video" width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                         <div className="absolute grid place-items-center right-1 top-4 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-90
