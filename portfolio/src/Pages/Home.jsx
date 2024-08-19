@@ -126,7 +126,7 @@ const Home = () => {
                     <section className="flex flex-col md:flex-row items-center gap-5 shrink-0" >
 
                         {/* Profile Pic */}
-                        <div className="shrink-0 relative w-44 h-44 bg-none shadow-lg border-2 shadow-indigo-300 border-black rounded-full overflow-hidden dark:shadow-slate-700 dark:shadow-2xl dark:bg-none  dark:border-black ">
+                        <div className="shrink-0 relative w-44 h-44 bg-none shadow-lg border-4 shadow-indigo-400 border-black rounded-full overflow-hidden dark:shadow-indigo-950 dark:drop-shadow-2xl dark:bg-none dark:border-black ">
                             <span>
                                 <img className="aspect-square" alt="Profile picture" src={ProfilePic} />
                             </span>
