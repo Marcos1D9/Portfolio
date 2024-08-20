@@ -182,9 +182,9 @@ const Home = () => {
                                     buttonFlexProps="justify-center items-center grow"
                                 />
                                 <Tooltip
-                                    link="https://www.talent.soyhenry.com/candidate/5486"
-                                    mainText="Henry Talent"
-                                    tooltipSpan="Register here to see my Henry graduated profile!"
+                                    link="https://certificates.soyhenry.com/cert?id=3846a0e4-0a02-4996-b356-e1809e4ab391"
+                                    mainText="Henry certificate"
+                                    tooltipSpan="Here is my Full-Stack developer certificate!"
                                     henryTalent={HenryTalentIcon}
                                     henrySquare={HenrySquareIcon}
                                     tooltipText="dark:text-yellow-300 text-gray-700 font-bold"
@@ -213,8 +213,8 @@ const Home = () => {
 
                         {/* Experience section title start */}
                         <header className="shrink-0 font-bold text-2xl underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-6 flex max-xxxs:pl-5 max-xxxs:mx-0 max-xxs:pl-5 max-xss:mx-0 gap-4 items-end ">
-                                <h2>Experience</h2>
-                                <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
+                            <h2>Experience</h2>
+                            <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
                         </header>
                         {/* Experience section title end */}
 
@@ -329,7 +329,7 @@ const Home = () => {
                                         <p className="text-slate-400 dark:text-slate-200 mt-5">This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers.</p>
                                         <p className="text-slate-400 dark:text-slate-200 mt-5">There's a video below that explains and cover most part of the website.</p>
                                         <p className="text-slate-900 dark:text-slate-400 mt-5">(The mentioned video is in Spanish language, since it's my native language)</p>
-                                        
+
                                         {/* Project technologies icons */}
                                         <div className="flex gap-1 mt-1.5 items-center pt-3 pb-6">
                                             <div className="relative group/tooltip">
