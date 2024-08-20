@@ -1,17 +1,20 @@
 import React from 'react';
 import "../index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin  } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
+import HenryCertificate from '../assets/Henry certificate.jpg'
 
 const Tooltip = ({ link, henryTalent, henrySquare, githubIcon, linkedinIcon, mainText, tooltipSpan, pointerBorder, pointerBackground, tooltipBorder, tooltipText, tooltipTextColor, tooltipBackground, buttonTextColor, buttonBorderColor, buttonBackgroundColor, hoverButtonBorderColor, buttonXPadding, buttonWidth, buttonHeight, buttonFlexProps }) => {
   return (
-    <button className={`whitespace-nowrap max-xxs:text-sm max-xxxs:whitespace-normal flex relative group/tooltip ${buttonFlexProps} gap-1 font-bold ${buttonXPadding} ${buttonWidth} ${buttonHeight} rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark ${buttonTextColor} border-2 ${buttonBorderColor} dark:hover:border-2 ${buttonBackgroundColor} ${hoverButtonBorderColor} transition`} onClick={() => window.open(link, "_blank")}>
-      {henryTalent && <img src={HenryTalentIcon} className='h-7 dark:hidden'/>}
+    <button className={`whitespace-nowrap max-xxs:text-sm max-xxxs:whitespace-normal flex relative group/tooltip ${buttonFlexProps} gap-1 font-bold ${buttonXPadding} ${buttonWidth} ${buttonHeight} rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark ${buttonTextColor} border-2 ${buttonBorderColor} dark:hover:border-2 ${buttonBackgroundColor} ${hoverButtonBorderColor} transition`}
+      onClick={() => window.open(HenryCertificate, "_blank")}
+    >
+      {henryTalent && <img src={HenryTalentIcon} className='h-7 dark:hidden' />}
       {henrySquare && <img src={HenrySquareIcon} className='h-6 hidden dark:flex' />}
-      {githubIcon ? <FontAwesomeIcon icon={faGithub}/> : null}
-      {linkedinIcon ? <FontAwesomeIcon icon={faLinkedin}/> : null}
+      {githubIcon ? <FontAwesomeIcon icon={faGithub} /> : null}
+      {linkedinIcon ? <FontAwesomeIcon icon={faLinkedin} /> : null}
       <h2>{mainText}</h2>
       <span className={`absolute border pointer-events-none transition-all opacity-0 dark:z-10 bottom-full -translate-y-0 py-2 px-2 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap ${tooltipBorder} ${tooltipTextColor} ${tooltipBackground} dark:border ${tooltipText} group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3 z-20`}>
         {tooltipSpan}

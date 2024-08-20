@@ -182,7 +182,6 @@ const Home = () => {
                                     buttonFlexProps="justify-center items-center grow"
                                 />
                                 <Tooltip
-                                    link="https://certificates.soyhenry.com/cert?id=3846a0e4-0a02-4996-b356-e1809e4ab391"
                                     mainText="Henry certificate"
                                     tooltipSpan="Here is my Full-Stack developer certificate!"
                                     henryTalent={HenryTalentIcon}
