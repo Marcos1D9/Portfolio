@@ -223,7 +223,7 @@ const Home = () => {
                             <div className="flex flex-col gap-5">
                                 {/* Experience Job title start */}
                                 <div className="flex flex-col gap-1 max-xxxs:pl-5 max-xxs:pl-5 ">
-                                    <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-200">Front-End Developer • Munia - Salud Mental y Emcional en el Trabajo</h2>
+                                    <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-200">Front-End Developer • Munia - Salud Mental y Emocional en el Trabajo</h2>
                                     <p className="text-sm text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
                                 </div>
                                 {/* Experience Job title end */}
