@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
-import HenryCertificate from '../assets/Henry certificate.jpg'
+
 
 const Tooltip = ({ link, henryTalent, henrySquare, githubIcon, linkedinIcon, mainText, tooltipSpan, pointerBorder, pointerBackground, tooltipBorder, tooltipText, tooltipTextColor, tooltipBackground, buttonTextColor, buttonBorderColor, buttonBackgroundColor, hoverButtonBorderColor, buttonXPadding, buttonWidth, buttonHeight, buttonFlexProps }) => {
   return (
     <button className={`whitespace-nowrap max-xxs:text-sm max-xxxs:whitespace-normal flex relative group/tooltip ${buttonFlexProps} gap-1 font-bold ${buttonXPadding} ${buttonWidth} ${buttonHeight} rounded-xl shadow-social-link dark:shadow-social-link-dark hover:shadow-social-link-hover dark:hover:shadow-social-link-hover-dark ${buttonTextColor} border-2 ${buttonBorderColor} dark:hover:border-2 ${buttonBackgroundColor} ${hoverButtonBorderColor} transition`}
-      onClick={() => window.open(HenryCertificate, "_blank")}
+      onClick={() => window.open(link, "_blank")}
     >
       {henryTalent && <img src={HenryTalentIcon} className='h-7 dark:hidden' />}
       {henrySquare && <img src={HenrySquareIcon} className='h-6 hidden dark:flex' />}

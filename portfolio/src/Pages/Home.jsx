@@ -13,6 +13,7 @@ import MongoDBIcon from "../assets/mongo-svgrepo-com.svg";
 import reactIcon from "../assets/react-svgrepo-com.svg";
 import "../index.css";
 import Tooltip from "../components/Tooltip";
+import HenryCertificate from '../assets/Henry certificate.jpg'
 
 const Home = () => {
     const [theme, setTheme] = useState(() => {
@@ -146,7 +147,7 @@ const Home = () => {
                             {/* Social media Buttons */}
                             <div className="flex gap-3 mt-3 -mb-5 flex-wrap-reverse max-xs:mt-4 max-xs:-mb-5">
                                 <Tooltip
-                                    link="https://github.com/Marcos1D9"
+                                    link="https://www.linkedin.com/in/medina-marcos-developer/"
                                     mainText="Linkedin"
                                     tooltipSpan="Go check my LinkedIn profile :D"
                                     linkedinIcon={faLinkedin}
@@ -182,6 +183,7 @@ const Home = () => {
                                     buttonFlexProps="justify-center items-center grow"
                                 />
                                 <Tooltip
+                                    link={HenryCertificate}
                                     mainText="Henry certificate"
                                     tooltipSpan="Here is my Full-Stack developer certificate!"
                                     henryTalent={HenryTalentIcon}
