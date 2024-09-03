@@ -1,8 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import copy from 'clipboard-copy';
-import { faSun, faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faBriefcase, faStar, faArrowUpRightFromSquare, faEnvelope, faPaperPlane, faCopy } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import sunThemeIcon from '../assets/sunThemeIcon.svg'
 import ProfilePic from '../assets/ProfilePic.jpg'
 import HenryTalentIcon from '../assets/HenryTalentIcon.jpg'
 import HenrySquareIcon from '../assets/HenrySquareIcon.png'
@@ -106,12 +107,12 @@ const Home = () => {
                     </div>
                     {/* Navbar profile pic logo end */}
                     {/* Navbar profile theme button start */}
-                    <button className="md:mr-10 py-4 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
+                    <button className="md:mr-10 py-2 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
                         <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
                             <FontAwesomeIcon icon={faMoon} />
                         </div>
-                        <div className="text-4xl flex-nowrap hidden dark:block text-slate-100">
-                            <FontAwesomeIcon icon={faSun} />
+                        <div className="flex-nowrap hidden dark:block">
+                            <img className="h-10" src={sunThemeIcon} alt="Clear theme button" />
                         </div>
                     </button>
                     {/* Navbar profile theme button end */}
