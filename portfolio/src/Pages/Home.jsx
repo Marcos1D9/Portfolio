@@ -15,6 +15,7 @@ import reactIcon from "../assets/react-svgrepo-com.svg";
 import "../index.css";
 import Tooltip from "../components/Tooltip";
 import HenryCertificate from '../assets/Henry certificate.jpg'
+import LanguageToggleButton from "../components/LanguageToggleButton";
 
 const Home = () => {
     const [theme, setTheme] = useState(() => {
@@ -83,6 +84,12 @@ const Home = () => {
             });
     };
 
+    const [language, setLanguage] = useState('en'); // Idioma por defecto es inglés
+
+    const toggleLanguage = () => {
+        setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'es' : 'en'));
+    };
+
 
     return (
         <>
@@ -107,14 +114,19 @@ const Home = () => {
                     </div>
                     {/* Navbar profile pic logo end */}
                     {/* Navbar profile theme button start */}
-                    <button className="md:mr-10 py-2 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
-                        <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
-                            <FontAwesomeIcon icon={faMoon} />
+                    <div className="flex items-center">
+                        <div className={`${scrollPast ? '' : 'opacity-0'}`}>
+                            <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
                         </div>
-                        <div className="flex-nowrap hidden dark:block">
-                            <img className="h-10" src={sunThemeIcon} alt="Clear theme button" />
-                        </div>
-                    </button>
+                        <button className="md:mr-10 py-2 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
+                            <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
+                                <FontAwesomeIcon className="before:w-full before-h-full before:bg-gray-800 before:absolute" icon={faMoon} />
+                            </div>
+                            <div className="flex-nowrap hidden dark:block">
+                                <img className="h-10" src={sunThemeIcon} alt="Clear theme button" />
+                            </div>
+                        </button>
+                    </div>
                     {/* Navbar profile theme button end */}
                 </header>
             </div>
@@ -123,12 +135,12 @@ const Home = () => {
 
             {/* Main start */}
             <div className="max-w-3xl min-w-3xl md:mx-auto flex-col mb-5 flex gap-10 px-8">
-                <main className="flex flex-col gap-16">
+                <main className="flex flex-col gap-12">
                     {/* Hero presentation start */}
-                    <section className="flex flex-col md:flex-row items-center gap-5 shrink-0" >
+                    <section className="flex flex-col md:flex-column items-center gap-5 shrink-0" >
 
                         {/* Profile Pic */}
-                        <div className="shrink-0 relative w-44 h-44 bg-none shadow-lg border-4 shadow-indigo-400 border-black rounded-full overflow-hidden dark:shadow-indigo-950 dark:drop-shadow-2xl dark:bg-none dark:border-black ">
+                        <div className="shrink-0 relative w-52 h-52 bg-none shadow-lg border-4 shadow-indigo-400 border-black rounded-full overflow-hidden dark:shadow-indigo-950 dark:drop-shadow-2xl dark:bg-none dark:border-black ">
                             <span>
                                 <img className="aspect-square" alt="Profile picture" src={ProfilePic} />
                             </span>
@@ -136,17 +148,18 @@ const Home = () => {
                         {/* Profile Pic */}
 
                         {/* About presentation */}
-                        <div className="flex flex-col items-center gap-3 shrink-0">
+                        <div className="flex flex-col items-center gap-3">
 
                             {/* Presentation title */}
-                            <div className="flex flex-col items-left gap-2 shrink-0">
+                            <div className="flex flex-col items-center gap-2 max-w-full">
                                 <h1 className="shrink-0 text-2xl md:text-4xl text-center md:text-left font-bold text-slate-600 dark:text-slate-100">Marcos Damián E. Medina</h1>
-                                <p className="shrink-0 text-center hyphens-auto text-slate-700 text-sm md:text-lg dark:text-slate-300 max-w-xl rounded-2xl">Welcome! I'm a passionate Web frontend developer</p>
+                                <p className="shrink-0 font-mono text-center hyphens-auto text-slate-700 text-sm md:text-lg dark:text-slate-300 max-w-full rounded-2xl">{language === 'en' ? 'Welcome!' : '¡Bienvenidos!'}</p>
+                                <p className="shrink-0 text-center text-slate-700 text-sm md:text-lg dark:text-slate-300 max-w-full h-10 rounded-2xl">{language === 'en' ? 'I am passionate about web development, focused on the integration of social networks' : 'Soy un apasionado del desarrollo de páginas web, enfocado en la integración de redes sociales'}</p>
                             </div>
                             {/* Presentation title */}
 
                             {/* Social media Buttons */}
-                            <div className="flex gap-3 mt-3 -mb-5 flex-wrap-reverse max-xs:mt-4 max-xs:-mb-5">
+                            <div className="flex gap-3 mt-3 -mb-10 flex-wrap-reverse max-xs:mt-4 max-xs:-mb-5">
                                 <Tooltip
                                     link="https://www.linkedin.com/in/medina-marcos-developer/"
                                     mainText="Linkedin"
@@ -185,7 +198,7 @@ const Home = () => {
                                 />
                                 <Tooltip
                                     link={HenryCertificate}
-                                    mainText="Henry certificate"
+                                    mainText={language === 'en' ? 'Henry graduation certificate' : 'Certificado de graduación de Henry'}
                                     tooltipSpan="Here is my Full-Stack developer certificate!"
                                     henryTalent={HenryTalentIcon}
                                     henrySquare={HenrySquareIcon}
@@ -203,6 +216,9 @@ const Home = () => {
                                     buttonFlexProps="justify-center items-center  grow"
                                 />
                             </div>
+                            <div className="w-full items-end mt-10 justify-end">
+                                <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
+                            </div>
                             {/* Social media Buttons */}
                         </div>
                         {/* About presentation */}
@@ -215,7 +231,7 @@ const Home = () => {
 
                         {/* Experience section title start */}
                         <header className="shrink-0 font-bold text-2xl underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-6 flex max-xxxs:pl-5 max-xxxs:mx-0 max-xxs:pl-5 max-xss:mx-0 gap-4 items-end ">
-                            <h2>Experience</h2>
+                            <h2>{language === 'en' ? 'Experience' : 'Experiencia'}</h2>
                             <FontAwesomeIcon className="scale-110" icon={faBriefcase} />
                         </header>
                         {/* Experience section title end */}
@@ -225,7 +241,7 @@ const Home = () => {
                             <div className="flex flex-col gap-5">
                                 {/* Experience Job title start */}
                                 <div className="flex flex-col gap-1 max-xxxs:pl-5 max-xxs:pl-5 ">
-                                    <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-200">Front-End Developer • Munia - Salud Mental y Emocional en el Trabajo</h2>
+                                    <h2 className="text-lg font-semibold text-slate-700 dark:text-slate-200">{language === 'en' ? 'Front-End Developer • Munia - Mental and Emotional Health at Work' : 'Desarrollador web Frontend • Munia - Salud Mental y Emocional en el Trabajo'}</h2>
                                     <p className="text-sm text-slate-500 dark:text-slate-400">Sept. 2023 - Nov. 2023</p>
                                 </div>
                                 {/* Experience Job title end */}
@@ -233,10 +249,10 @@ const Home = () => {
 
                                 {/* Experience Job description */}
                                 <ul className="list-disc flex flex-col gap-2 ml-5 text-slate-700 dark:text-gray-300 text-md">
-                                    <li>Create a view to be able to view and edit the information of each provider, such as adding the services they offer, their time availability, and their professional documents, among others.</li>
-                                    <li>Plan and carry out the development of a table that will allow comments to be displayed effectively on the platform</li>
-                                    <li>Conditional rendering based on dynamic routes and user type, using Redux toolkit's according to the role of each user, and React-Router-DOM</li>
-                                    <li>Planning, design and development of components made with ReactJs, Material UI and Sass</li>
+                                    <li>{language === 'en' ? 'Create a view to be able to view and edit the information of each provider, such as adding the services they offer, their time availability, and their professional documents, among others' : 'Crea una vista para poder visualizar y editar la información de cada proveedor, como agregar los servicios que ofrecen, su disponibilidad horaria, sus documentos profesionales, entre otros'}</li>
+                                    <li>{language === 'en' ? 'Plan and carry out the development of a table that will allow comments to be displayed effectively on the platform' : 'Planificar y llevar a cabo el desarrollo de una tabla que permita visualizar de manera efectiva los comentarios en la plataforma'}</li>
+                                    <li>{language === 'en' ? 'Conditional rendering based on dynamic routes and user type, using Redux toolkit, according to the role of each user, and React-Router-DOM' : 'Representación condicional basada en rutas dinámicas y tipo de usuario, utilizando el kit de herramientas Redux según el rol de cada usuario y React-Router-DOM'}</li>
+                                    <li>{language === 'en' ? 'Planning, design and development of components made with ReactJs, Material UI and Sass' : 'Planificación, diseño y desarrollo de componentes realizados con ReactJs, Material UI y Sass'}</li>
                                 </ul>
                                 {/* Experience Job description */}
                             </div>
@@ -248,7 +264,7 @@ const Home = () => {
                     <section className="w-full">
                         {/* Projects section title */}
                         <header className="font-bold text-center text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex max-xxxs:pl-3 max-xxs:min-w-full min-[220px]:pl-5 max-xxs:justify-start max-xxs:px-0 items-center gap-3">
-                            <h2>Projects</h2>
+                            <h2>{language === 'en' ? 'Projects' : 'Proyectos'}</h2>
                             <FontAwesomeIcon icon={faStar} className="scale-110" />
                         </header>
                         {/* Projects section title */}
@@ -257,11 +273,11 @@ const Home = () => {
                             {/* My projects container */}
                             <div className="grid gap-10">
                                 {/* Munia project container*/}
-                                <a href="https://sesiones.munia.co/" target="_blank" rel="noreferrer" className="max-xxs:min-w-0 block group border-2 border-gray-200 hover:border-gray-300 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
+                                <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-xxs:min-w-0 block group border-2 border-gray-200 hover:border-gray-300 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
                                     <article className="relative flex flex-col justify-between w-full py-6 px-7">
                                         {/* Munia project description */}
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">Munia Sesiones 1:1</h2>
-                                        <p className="text-slate-400 dark:text-slate-200 mt-5">The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses.</p>
+                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">{language === 'en' ? 'Munia sessions 1:1' : 'Munia Sesiones 1:1'}</h2>
+                                        <p className="text-slate-400 dark:text-slate-200 mt-5">{language === 'en' ? 'The web app enables health professionals from "Munia.co" to connect with employees of partnered companies via Zoom for virtual sessions and diagnoses' : 'La aplicación web permite a los profesionales de la salud de “Munia.co” conectarse con empleados de empresas asociadas a través de Zoom para sesiones y diagnósticos virtuales'}</p>
                                         {/* Munia project description */}
 
                                         {/* Munia project technologies icons */}
@@ -281,13 +297,13 @@ const Home = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Must contact Munia for register)</p>
+                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? '(Must contact Munia for register)' : '(Debe contactar con Munia para registrarse)'}</p>
 
                                         {/* Munia project redirect button */}
                                         <div className="flex flex-row mb-3">
                                             <Tooltip
                                                 link="https://munia.co/"
-                                                mainText="Main official website"
+                                                mainText={`${language === 'en' ? 'Main official website' : 'Sitio web oficial'}`}
                                                 tooltipSpan="Munia's main official website"
                                                 tooltipText="dark:text-orange-200 text-gray-800 font-bold"
                                                 tooltipBackground="dark:bg-gray-800 dark:bg-none bg-orange-100"
@@ -327,10 +343,10 @@ const Home = () => {
                                 {/* Grow-Up project container*/}
                                 <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="block group border-2 border-gray-100 hover:border-gray-200 dark:border-gray-700 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow">
                                     <article className="relative flex flex-col justify-between w-full py-6 px-7 ">
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">Grow-Up Books E-commerce</h2>
-                                        <p className="text-slate-400 dark:text-slate-200 mt-5">This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers.</p>
-                                        <p className="text-slate-400 dark:text-slate-200 mt-5">There's a video below that explains and cover most part of the website.</p>
-                                        <p className="text-slate-900 dark:text-slate-400 mt-5">(The mentioned video is in Spanish language, since it's my native language)</p>
+                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-lg font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea "Grow-Up"'}</h2>
+                                        <p className="text-slate-400 dark:text-slate-200 mt-5">{language === 'en' ? 'This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers' : 'Este proyecto brinda a las personas la oportunidad de buscar, filtrar y actualizar nuevos libros sobre desarrollo personal e inspiración, así como comprar nuevos best sellers'}</p>
+                                        <p className="text-slate-400 dark:text-slate-200 mt-5">{language === 'en' ? 'There is a video below that explains and cover most part of the website' : 'A continuación se muestra un video que explica y cubre la mayor parte del sitio web'}</p>
+                                        <p className="text-slate-900 dark:text-slate-400 mt-5">{language === 'en' ? '(The mentioned video is in Spanish language, since it is my native language)' : '(El video mencionado está en español, ya que es mi lengua materna)'}</p>
 
                                         {/* Project technologies icons */}
                                         <div className="flex gap-1 mt-1.5 items-center pt-3 pb-6">
@@ -348,7 +364,7 @@ const Home = () => {
                                                 <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">React</span>
                                             </div>
                                         </div>
-                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">(Click "Youtube" button on the video player for fullscreen)</p>
+                                        <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? '(Click on the button with the text "Youtube" for full screen)' : '(Click en el botón con el texto "Youtube" para pantalla completa)'}</p>
                                         {/* Project technologies icons */}
                                         <iframe className="aspect-video" width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                         <div className="absolute grid place-items-center right-1 top-4 bg-white dark:bg-gray-800 w-9 h-9 rounded-full scale-90
@@ -372,7 +388,7 @@ const Home = () => {
                     <section className="w-full">
                         {/* Email Title */}
                         <header className="font-bold text-2xl text-indigo-400 dark:text-gray-100 mb-6 flex max-xxs:justify-center max-[220px]:justify-start max-[220px]:pl-5 items-center gap-3">
-                            <h2>Email</h2>
+                            <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
                             <FontAwesomeIcon icon={faEnvelope} className="scale-110" />
                         </header>
                         {/* Email Title */}
