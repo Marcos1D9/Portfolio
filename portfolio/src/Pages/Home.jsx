@@ -119,7 +119,7 @@ const Home = () => {
                             <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
                         </div>
                         <button className="md:mr-10 py-2 px-2 sm:py-5 flex items-end gap-4 outline-none" onClick={handleChangeTheme}>
-                            <div className="text-4xl flex-nowrap dark:hidden text-slate-700">
+                            <div className="text-4xl flex-nowrap ml-3 dark:hidden text-slate-700">
                                 <FontAwesomeIcon className="before:w-full before-h-full before:bg-gray-800 before:absolute" icon={faMoon} />
                             </div>
                             <div className="flex-nowrap hidden dark:block">
