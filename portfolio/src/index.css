@@ -2,6 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+@font-face {
+    font-family: "welcome";
+    src: local("PixelifySans-VariableFont_wght"),
+        url(./assets/fonts/PixelifySans-VariableFont_wght.ttf) format("truetype");
+}
+
 @layer base {
     body {
         @apply bg-white dark:bg-gray-800 mx-auto max-[300px]:-mr-10 max-xxxs:-mr-20 bg-opacity-25
@@ -10,6 +17,7 @@
     h1 {
         font-family: 'Poppins', sans-serif, ;
     }
+
 
     /* Estilos personalizados CSS */
     @keyframes bounceIn {

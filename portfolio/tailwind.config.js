@@ -3,10 +3,15 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx,css}",
   ],
   "darkMode": "class",
   theme: {
+    extend: {
+      fontFamily: {
+        Jersey10PixelFont: ['welcome', 'sans-serif'],
+      },
+    },
     screens: {
       'xxxs': '280px',
       'xxs': '335px',
@@ -14,6 +19,8 @@ export default {
       ...defaultTheme.screens,
     },
   },
-  plugins: [],
+  plugins: [
+    require("@designbycode/tailwindcss-text-stroke")
+  ],
 }
 
