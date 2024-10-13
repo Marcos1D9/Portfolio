@@ -209,7 +209,7 @@ const Home = () => {
 
 
             {/* Main start */}
-            <div className="max-w-3xl min-w-3xl md:mx-auto flex-col mb-5 flex gap-10">
+            <div className="max-w-3xl min-w-3xl mx-auto flex-col mb-5 flex gap-10">
                 <main className="flex flex-col gap-12">
 
 
