@@ -100,9 +100,9 @@ const Home = () => {
     };
 
     return (
-        <>
+        <div className="flex flex-col items-center overflow-hidden">
             {/* Navbar start */}
-            <div className="max-w-full min-w-5xl flex flex-col justify-center sticky top-0 z-10 max-[293px]: ">
+            <div className="w-full flex flex-col justify-center sticky top-0 z-10">
                 {/* Navbar content container */}
                 <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
 
@@ -209,7 +209,7 @@ const Home = () => {
 
 
             {/* Main start */}
-            <div className="max-w-3xl min-w-3xl mx-auto flex-col mb-5 flex gap-10">
+            <div className="max-w-4xl mx-10 flex-col mb-5 flex gap-10">
                 <main className="flex flex-col gap-12">
 
 
@@ -685,7 +685,7 @@ const Home = () => {
                 </main>
             </div >
             {/* Main end */}
-        </>
+        </div>
     )
 }
 export default Home
