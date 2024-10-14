@@ -472,10 +472,11 @@ const Home = () => {
                                 {/* Grow-Up project container*/}
                                 <article className="relative flex flex-col justify-between w-full mb-20">
                                     <div className="flex flex-col items-center">
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea "Grow-Up"'}</h2>
-                                        <p className="text-slate-400 dark:text-slate-200 mt-5">{language === 'en' ? 'This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers' : 'Este proyecto brinda a las personas la oportunidad de buscar, filtrar y actualizar nuevos libros sobre desarrollo personal e inspiración, así como comprar nuevos best sellers'}</p>
-                                        <p className="text-slate-400 dark:text-slate-200 mt-5">{language === 'en' ? 'There is a video below that explains and cover most part of the website' : 'A continuación se muestra un video que explica y cubre la mayor parte del sitio web'}</p>
-                                        <p className="text-slate-900 dark:text-slate-400 mt-5">{language === 'en' ? '(The mentioned video is in Spanish language, since it is my native language)' : '(El video mencionado está en español, ya que es mi lengua materna)'}</p>
+                                        <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea'}</h2>
+                                        <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? '' : '"Grow-Up"'}</h2>
+                                        <p className="text-slate-400 text-center dark:text-slate-200 mt-5">{language === 'en' ? 'This project brings people the oportunity of searching, filtering, and updating new books about self development and inspiration, as well as buying new best sellers' : 'Este proyecto brinda a las personas la oportunidad de buscar, filtrar y actualizar nuevos libros sobre desarrollo personal e inspiración, así como comprar nuevos best sellers'}</p>
+                                        <p className="text-slate-400 text-center dark:text-slate-200 mt-5">{language === 'en' ? 'There is a video below that explains and cover most part of the website' : 'A continuación se muestra un video que explica y cubre la mayor parte del sitio web'}</p>
+                                        <p className="text-slate-900 text-center dark:text-slate-400 mt-5">{language === 'en' ? '(The mentioned video is in Spanish language, since it is my native language)' : '(El video mencionado está en español, ya que es mi lengua materna)'}</p>
                                     </div>
 
                                     {/* Project technologies icons */}
@@ -511,7 +512,7 @@ const Home = () => {
                                 <article className="relative flex flex-col justify-between w-full ">
                                     {/* Climate-Ducky description */}
                                     <div className="flex flex-col items-center">
-                                        <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? 'Weather website "Climate Ducky"' : 'Web del clima "Climate Ducky"'}</h2>
+                                        <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? 'Weather website "Climate Ducky"' : 'Web del clima "Climate Ducky"'}</h2>
                                         <p className="text-slate-400 dark:text-slate-200 mt-5">{language === 'en' ? 'Your new favorite weather website!' : "¡Tu nueva web del clima favorita! "}</p>
                                         <p className="text-slate-400 text-center dark:text-slate-200 mt-5">{language === 'en' ? "Just enter a city name, and you'll see the city's weather information!" : "¡Simplemente ingresa el nombre de una ciudad y verás la información meteorológica de la ciudad!"}</p>
                                     </div>
