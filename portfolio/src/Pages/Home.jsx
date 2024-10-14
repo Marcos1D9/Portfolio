@@ -209,7 +209,7 @@ const Home = () => {
 
 
             {/* Main start */}
-            <div className={`max-w-4xl flex-col mb-5 flex gap-10`}>
+            <div className={`overflow-hidden max-w-4xl flex-col mb-5 flex gap-10`}>
                 <main className="flex flex-col gap-12">
 
 
