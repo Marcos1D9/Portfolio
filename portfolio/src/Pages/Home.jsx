@@ -102,7 +102,7 @@ const Home = () => {
     return (
         <div className="flex flex-col items-center">
             {/* Navbar start */}
-            <div className="overflow-hidden w-full flex flex-col justify-center sticky top-0 z-10">
+            <div className="w-full flex flex-col justify-center sticky top-0 z-10">
                 {/* Navbar content container */}
                 <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
 
@@ -129,7 +129,7 @@ const Home = () => {
                     {/* Navbar profile theme & Language button start */}
                     <div className="flex items-center">
                         {/* Checkbox y botón para abrir/cerrar la sidebar */}
-                        <label className="xs:hidden pr-3 z-20 overflow-visible">
+                        <label className="xs:hidden pr-3 z-20">
                             <div className="aspect-square w-10 cursor-pointer flex flex-col items-center justify-center">
                                 <input
                                     className="hidden peer"
@@ -147,7 +147,7 @@ const Home = () => {
                         {/* Sidebar con botones de idioma y tema */}
                         {isSidebarOpen && (
                             /* Sidebar container */
-                            <div className={`overflow-visible absolute top-0 right-0 w-fit h-fit bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-sm shadow-lg z-10 px-5 rounded-bl-3xl transform transition-transform duration-1000 ease-in-out origin-right`}>
+                            <div className={`absolute top-0 right-0 w-fit h-fit bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-sm shadow-lg z-10 px-5 rounded-bl-3xl transform transition-transform duration-1000 ease-in-out origin-right`}>
 
                                 <section className="flex flex-col items-center gap-4">
                                     <p className="mt-4 dark:text-gray-100 text-slate-700 font-bold">{language === "en" ? "Settings" : 'Ajustes'}</p>
