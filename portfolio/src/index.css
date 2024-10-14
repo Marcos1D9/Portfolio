@@ -1,7 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
     font-family: "welcome";
@@ -9,17 +8,16 @@
         url(./assets/fonts/PixelifySans-VariableFont_wght.ttf) format("truetype");
 }
 
+/* Estilos personalizados CSS */
 @layer base {
     body {
-        @apply bg-white dark:bg-gray-800 mx-auto max-[300px]:-mr-10 max-xxxs:-mr-80 bg-opacity-25
+        @apply bg-white dark:bg-gray-800 bg-opacity-25;
     }
 
     h1 {
-        font-family: 'Poppins', sans-serif, ;
+        font-family: 'Poppins', sans-serif;
     }
 
-
-    /* Estilos personalizados CSS */
     @keyframes bounceIn {
         0% {
             opacity: 0;

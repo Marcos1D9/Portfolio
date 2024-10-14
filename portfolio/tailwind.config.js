@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,css}",
   ],
-  "darkMode": "class",
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -13,14 +14,12 @@ export default {
       },
     },
     screens: {
-      'xxxs': '280px',
-      'xxs': '335px',
-      'xs': '540px',
-      ...defaultTheme.screens,
+      phone: '640px',
+      tablet: '900px',
+      laptop: '1024px',
     },
   },
   plugins: [
-    require("@designbycode/tailwindcss-text-stroke")
+    require("@designbycode/tailwindcss-text-stroke"),
   ],
 }
-
