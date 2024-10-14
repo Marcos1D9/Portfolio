@@ -100,7 +100,7 @@ const Home = () => {
     };
 
     return (
-        <div className="flex flex-col items-center overflow-hidden">
+        <div className="flex flex-col items-center">
             {/* Navbar start */}
             <div className="w-full flex flex-col justify-center sticky top-0 z-10">
                 {/* Navbar content container */}
@@ -209,12 +209,12 @@ const Home = () => {
 
 
             {/* Main start */}
-            <div className="max-w-4xl mx-10 flex-col mb-5 flex gap-10">
+            <div className={`max-w-4xl flex-col mb-5 flex gap-10`}>
                 <main className="flex flex-col gap-12">
 
 
                     {/* Hero presentation start */}
-                    <section className="flex flex-col md:flex-column items-center gap-5 shrink-0" >
+                    <section className="px-20 flex flex-col md:flex-column items-center gap-5 shrink-0" >
 
                         {/* Profile Pic */}
                         <div className="shrink-0 relative w-52 h-52 bg-none shadow-lg border-4 shadow-indigo-400 border-black rounded-full overflow-hidden dark:shadow-indigo-950 dark:drop-shadow-2xl dark:bg-none dark:border-black ">
@@ -236,7 +236,7 @@ const Home = () => {
                             {/* Presentation title */}
 
                             {/* Social media Buttons start */}
-                            <div className="flex gap-3 mt-3 -mb-10 max-xs:overflow-hidden flex-wrap max-xs:mt-4 max-xs:-mb-5">
+                            <div className="flex gap-3 mt-3 -mb-10 flex-wrap max-xs:mt-4 max-xs:-mb-5">
                                 <TooltipButton
                                     link="https://www.linkedin.com/in/medina-marcos-developer/"
                                     mainText="Linkedin"
@@ -308,7 +308,7 @@ const Home = () => {
 
 
                     {/* Experience section start */}
-                    <section className="w-full flex flex-col items-center shrink-0 mt-3 mb-3" id="hero-section">
+                    <section className="px-20 w-full flex flex-col items-center shrink-0 mt-3 mb-3" id="hero-section">
 
                         {/* Experience section title start */}
                         <header className="flex shrink-0 font-bold text-4xl underline underline-offset-4 decoration-solid text-indigo-400 dark:text-gray-100 mb-12 max-xxxs:pl-5 max-xxxs:mx-0 max-xxs:pl-5 max-xss:mx-0 gap-4 items-end ">
@@ -363,7 +363,7 @@ const Home = () => {
                         {/* Experience section text end */}
                     </section>
                     {/* Experience section end*/}
-                    <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
+                    <hr className="px-10 min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
 
                     {/* Projects section start */}
@@ -379,7 +379,7 @@ const Home = () => {
 
 
                         {/* My projects */}
-                        <div className="flex flex-col items-center gap-10">
+                        <div className="w-full flex flex-col items-center gap-10">
 
                             {/* My projects container */}
                             <div className="grid gap-10">
@@ -642,7 +642,7 @@ const Home = () => {
 
 
                     {/* Email section start */}
-                    <section className="w-full">
+                    <section className="px-10 w-full">
                         {/* Email Title */}
                         <header className="font-bold text-3xl text-indigo-400 dark:text-gray-100 mb-6 flex max-xxs:justify-center max-[220px]:justify-start max-[220px]:pl-5 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
