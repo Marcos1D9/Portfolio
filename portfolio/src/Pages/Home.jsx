@@ -101,8 +101,9 @@ const Home = () => {
 
     return (
         <div className="flex flex-col items-center">
+
             {/* Navbar start */}
-            <div className="overflow-y-hidden w-full flex flex-col justify-center sticky top-0 z-10">
+            <div className="overflow-x-hidden w-full flex flex-col justify-center sticky top-0 z-10">
                 {/* Navbar content container */}
                 <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
 
@@ -144,44 +145,6 @@ const Home = () => {
                             </div>
                         </label>
 
-                        {/* Sidebar con botones de idioma y tema */}
-                        {isSidebarOpen && (
-                            /* Sidebar container */
-                            <div className={`absolute top-0 right-0 w-fit h-fit bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-sm shadow-lg z-10 px-5 rounded-bl-3xl transform transition-transform duration-1000 ease-in-out origin-right`}>
-
-                                <section className="flex flex-col items-center gap-4">
-                                    <p className="mt-4 dark:text-gray-100 text-slate-700 font-bold">{language === "en" ? "Settings" : 'Ajustes'}</p>
-
-                                    <hr className="border-1 w-full h-0 border-gray-600" />
-                                    {/* Botón de cambiar tema */}
-                                    <button
-                                        className="w-full flex items-center gap-4 outline-none dark:border-gray-700 dark:border-2 border-2 border-gray-200 shadow-md rounded-md"
-                                        onClick={handleChangeTheme}
-                                    >
-                                        <div className="dark:hidden flex justify-between w-fit items-center">
-                                            <p className="w-full relative px-3 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-black rounded-md shadow-md dark:text-white dark:hover:bg-slate-700 transition duration-300">{language === "en" ? "Switch to dark theme" : 'Cambiar a tema oscuro'}</p>
-                                            <div className="text-3xl dark:hidden text-slate-700">
-                                                <FontAwesomeIcon icon={faMoon} />
-                                            </div>
-                                        </div>
-                                        <div className="hidden dark:flex dark:w-fit dark:items-center dark:gap-2">
-                                            <p className="w-full relative px-3 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-black  rounded-md shadow-md dark:text-white dark:hover:bg-slate-700 transition duration-300">{language === "en" ? "Switch to light theme" : 'Cambiar a tema claro'}</p>
-                                            <img className="h-8" src={sunThemeIcon} alt="Clear theme button" />
-                                        </div>
-                                    </button>
-
-
-                                    {/* Botón de cambiar idioma */}
-                                    <div className=" mb-4 ">
-                                        <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
-                                    </div>
-
-
-                                </section>
-
-
-                            </div>
-                        )}
 
                         {/* Botones normales que solo se muestran cuando la sidebar está cerrada */}
                         <div className={`max-xs:hidden ${isSidebarOpen ? 'hidden' : ''}`}>
@@ -206,7 +169,44 @@ const Home = () => {
                 {/* Navbar content container end */}
             </div>
             {/* Navbar end */}
+            {/* Sidebar con botones de idioma y tema */}
+            {isSidebarOpen && (
+                /* Sidebar container */
+                <div className={`absolute top-0 right-0 w-fit h-fit bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-sm shadow-lg z-10 px-5 rounded-bl-3xl transform transition-transform duration-1000 ease-in-out origin-right`}>
 
+                    <section className="flex flex-col items-center gap-4">
+                        <p className="mt-4 dark:text-gray-100 text-slate-700 font-bold">{language === "en" ? "Settings" : 'Ajustes'}</p>
+
+                        <hr className="border-1 w-full h-0 border-gray-600" />
+                        {/* Botón de cambiar tema */}
+                        <button
+                            className="w-full flex items-center gap-4 outline-none dark:border-gray-700 dark:border-2 border-2 border-gray-200 shadow-md rounded-md"
+                            onClick={handleChangeTheme}
+                        >
+                            <div className="dark:hidden flex justify-between w-fit items-center">
+                                <p className="w-full relative px-3 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-black rounded-md shadow-md dark:text-white dark:hover:bg-slate-700 transition duration-300">{language === "en" ? "Switch to dark theme" : 'Cambiar a tema oscuro'}</p>
+                                <div className="text-3xl dark:hidden text-slate-700">
+                                    <FontAwesomeIcon icon={faMoon} />
+                                </div>
+                            </div>
+                            <div className="hidden dark:flex dark:w-fit dark:items-center dark:gap-2">
+                                <p className="w-full relative px-3 py-2 active:bg-slate-100 hover:scale-105 dark:hover:scale-105 dark:active:scale-100 text-black  rounded-md shadow-md dark:text-white dark:hover:bg-slate-700 transition duration-300">{language === "en" ? "Switch to light theme" : 'Cambiar a tema claro'}</p>
+                                <img className="h-8" src={sunThemeIcon} alt="Clear theme button" />
+                            </div>
+                        </button>
+
+
+                        {/* Botón de cambiar idioma */}
+                        <div className=" mb-4 ">
+                            <LanguageToggleButton toggleLanguage={toggleLanguage} language={language} />
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+            )}
 
             {/* Main start */}
             <div className={`overflow-hidden max-w-4xl flex-col mb-5 flex gap-10`}>
@@ -367,12 +367,12 @@ const Home = () => {
 
 
                     {/* Projects section start */}
-                    
+
                     {/* Projects section end */}
 
 
                     {/* Email section start */}
-                    <section className="px-10 w-full">
+                    <section className="px-20 w-full">
                         {/* Email Title */}
                         <header className="font-bold text-3xl text-indigo-400 dark:text-gray-100 mb-6 flex max-xxs:justify-center max-[220px]:justify-start max-[220px]:pl-5 items-center gap-3">
                             <h2>{language === 'en' ? 'Email' : 'Correo electrónico'}</h2>
