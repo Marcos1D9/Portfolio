@@ -102,7 +102,7 @@ const Home = () => {
     return (
         <div className="flex flex-col items-center">
             {/* Navbar start */}
-            <div className="w-full flex flex-col justify-center sticky top-0 z-10">
+            <div className="overflow-hidden w-full flex flex-col justify-center sticky top-0 z-10">
                 {/* Navbar content container */}
                 <header className={`shrink-0 flex flex-row items-center justify-between py-1 px-auto z-20 bg-white dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg`}>
 
