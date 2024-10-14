@@ -428,7 +428,7 @@ const Home = () => {
 
 
                                 {/* Munia project container*/}
-                                <article className="relative flex flex-col justify-between w-full mt-4 mb-20">
+                                <article className="relative flex flex-col justify-between w-full mt-4 mb-20 max-phone:mb-6">
                                     {/* Munia project description */}
                                     <div className="flex flex-col items-center">
                                         <h2 className="text-gray-700 mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] text-center font-bold">{language === 'en' ? 'Munia sessions 1:1' : 'Munia Sesiones 1:1'}</h2>
@@ -492,7 +492,7 @@ const Home = () => {
                                 <hr className="min-w-max whitespace-nowrap border border-dotted border-gray-300 dark:border-gray-600 rounded-md" />
 
                                 {/* Grow-Up project container*/}
-                                <article className="relative flex flex-col justify-between w-full mb-20">
+                                <article className="relative flex flex-col justify-between w-full mb-20 max-phone:mb-6">
                                     <div className="flex flex-col items-center">
                                         <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? '"Grow-Up" Books E-commerce' : 'Tienda de libros en línea'}</h2>
                                         <h2 className="text-gray-700 text-center mr-2 dark:text-gray-200 text-2xl max-phone:text-[5vw] font-bold">{language === 'en' ? '' : '"Grow-Up"'}</h2>
