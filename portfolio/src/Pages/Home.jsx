@@ -481,7 +481,7 @@ const Home = () => {
                                     {/* Munia project technologies icons */}
 
                                     {/* Munia project login image */}
-                                    <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-phone:min-w-0 block group rounded-2xl shadow_translate-transition hover:shadow-2xl hover:shadow-orange-200 active:shadow-orange-300 active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-orange-200 dark:active:shadow-orange-300">
+                                    <a href="https://users.munia.co/sign-in" target="_blank" rel="noreferrer" className="max-phone:min-w-0 block group rounded-2xl shadow_translate-transition hover:shadow-2xl hover:shadow-orange-200 active:shadow-orange-300 active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-orange-200 dark:active:shadow-orange-300 max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-orange-200 max-phone:shadow-orange-200">
                                         <img className="aspect-video rounded-2xl h-30" src={MuniaLoginPic} alt="MuniaLoginPic" />
                                     </a>
                                     {/* Munia project login image */}
@@ -522,8 +522,8 @@ const Home = () => {
                                     </div>
                                     <p className="text-slate-900 dark:text-slate-400 mb-2 mt-2">{language === 'en' ? '(Click on the button with the text "Youtube" for full screen)' : '(Click en el botón con el texto "Youtube" para pantalla completa)'}</p>
                                     {/* Project technologies icons */}
-                                    <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="block group hover:shadow-2xl hover:shadow-[#84a4ac] active:shadow-[#92BBC7] active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-[#84a4ac] dark:active:shadow-[#92BBC7]">
-                                        <iframe className="aspect-video" width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                                    <a href="https://www.youtube.com/watch?v=xK3BDZ7JuFk" target="_blank" rel="noreferrer" className="block group hover:shadow-2xl hover:shadow-[#84a4ac] active:shadow-[#92BBC7] active:shadow-2xl dark:hover:shadow-2xl dark:hover:shadow-[#84a4ac] dark:active:shadow-[#92BBC7] max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-[#84a4ac] max-phone:shadow-[#84a4ac] rounded-xl">
+                                        <iframe className="aspect-video rounded-xl" width="100%" height="315" src="https://www.youtube.com/embed/xK3BDZ7JuFk?si=QAApM20iUHBtdBlU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                                     </a>
                                 </article>
                                 {/* Grow-Up project container*/}
@@ -593,7 +593,7 @@ const Home = () => {
                                     {/* Climate-Ducky technologies icons */}
 
                                     {/* Climate-Ducky login image */}
-                                    <a href="https://climate-ducky.vercel.app/" target="_blank" rel="noreferrer" className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl dark:hover:shadow-sky-300 hover:shadow-2xl hover:shadow-sky-300 active:shadow-2xl active:shadow-sky-400">
+                                    <a href="https://climate-ducky.vercel.app/" target="_blank" rel="noreferrer" className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-sky-300 max-phone:shadow-sky-300 dark:hover:shadow-sky-300 hover:shadow-2xl hover:shadow-sky-300 active:shadow-2xl active:shadow-sky-400">
                                         <img className="aspect-video rounded-2xl h-30" src={ClimateDuckyScreenshot} alt="MuniaLoginPic" />
                                     </a>
                                     {/* Climate-Ducky login image */}
@@ -668,7 +668,7 @@ const Home = () => {
                                     {/* Ingenium technologies icons */}
 
                                     {/* Ingenium login image */}
-                                    <div className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
+                                    <div className="max-phone:min-w-0 block rounded-2xl dark:rounded-2xl group dark:hover:shadow-2xl max-phone:shadow-2xl max-phone:dark:shadow-2xl max-phone:dark:shadow-blue-300 max-phone:shadow-blue-300 dark:hover:shadow-blue-300 hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-400">
                                         <video className="aspect-video rounded-2xl h-30" src={IngeniumWebVideo} controls="true" muted="true" alt="MuniaLoginPic" />
                                     </div>
                                     {/* Ingenium login image */}
