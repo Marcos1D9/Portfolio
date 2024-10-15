@@ -10,6 +10,7 @@
 
 /* Estilos personalizados CSS */
 @layer base {
+
     body {
         @apply bg-white dark:bg-gray-800 bg-opacity-25;
     }
