@@ -153,7 +153,7 @@ const Home = () => {
                                     </svg>
                                 </div>
                             </label>
-                            : 
+                            :
                             <label className="phone:hidden pr-3 z-20">
                                 <div className="aspect-square w-10 max-phone:w-[7vw] max-phone:h-[7vw] cursor-pointer flex flex-col items-center justify-center">
                                     <input
@@ -277,7 +277,7 @@ const Home = () => {
                             </div>
                             {/* Presentation title */}
 
-                            {/* Social media Buttons start */}
+                            {/* Social media & certificates Buttons start */}
                             <div className="flex gap-3 mt-3 -mb-10 w-[90%] h-fit flex-wrap max-phone:mt-4 max-phone:-mb-5">
                                 <TooltipButton
                                     link="https://www.linkedin.com/in/medina-marcos-developer/"
@@ -296,6 +296,25 @@ const Home = () => {
                                     buttonXPadding="px-6 max-phone:py-[10%]"
                                     buttonHeight="h-14 max-phone:h-[full]"
                                     buttonFlexProps="justify-center items-center grow"
+                                />
+                                <TooltipButton
+                                    link='https://cert.efset.org/bHumkJ'
+                                    mainText={language === 'en' ? 'C1 English proficiency certificate' : 'Certificado de nivel C1 de Inglés'}
+                                    tooltipSpan={language === 'en' ? "Here is my English proficiency certificate!" : "¡Acá está mi certificado de Inglés C1!"}
+                                    henryTalent=""
+                                    henrySquare=""
+                                    tooltipText="dark:text-gray-300 text-gray-700 font-bold"
+                                    tooltipBackground="dark:bg-gray-800 dark:bg-none bg-white"
+                                    tooltipBorder="dark:border-gray-300 border-gray-600 border-2"
+                                    buttonTextColor="dark:text-gray-300 text-gray-700"
+                                    buttonBackgroundColor="dark:bg-gray-800 bg-white"
+                                    buttonBorderColor="dark:border-gray-700 border-gray-200 border-2"
+                                    hoverButtonBorderColor="dark:hover:border-gray-300 hover:border-black active:border-gray-300"
+                                    pointerBackground="dark:bg-gray-800 bg-gray-100"
+                                    pointerBorder="dark:border-gray-400 border-gray-600 border"
+                                    buttonXPadding="px-6 max-phone:py-[10%]"
+                                    buttonHeight="h-14"
+                                    buttonFlexProps="justify-center items-center  grow"
                                 />
                                 <TooltipButton
                                     link="https://github.com/Marcos1D9"
@@ -335,7 +354,7 @@ const Home = () => {
                                     buttonFlexProps="justify-center items-center  grow"
                                 />
                             </div>
-                            {/* Social media Buttons end */}
+                            {/* Social media & certificate Buttons end */}
 
                             {/* Language button start */}
                             <div className="w-[90%] mt-10 max-phone:mt-5">
@@ -619,7 +638,7 @@ const Home = () => {
                                         <div className="flex flex-row items-center gap-1">
                                             <div className="relative group/tooltip">
                                                 <img src={HTML5Icon} className="w-8 max-phone:w-[12vw] max-phone:h-[12vw]" alt="" />
-                                                
+
                                                 <span className="max-phone:hidden max-phone:before:hidden absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-gray-700 dark:text-white dark:font-medium before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-gray-700 before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">HTML</span>
                                             </div>
                                             <div className="relative group/tooltip">
